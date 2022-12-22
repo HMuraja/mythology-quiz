@@ -9,6 +9,7 @@
 <body>
     <header> <!--Document header section starts here-->
         <h1>Greek Mythology Quiz</h1>
+        <button>mute</button>
         <nav>
             <ul> <!--Navigation Menu goes here-->
                 <li>About
@@ -19,8 +20,25 @@
                 </li>
             </ul>
         </nav>
-        <button>mute</button>
     </header>
-    
+
+    <div> <!--Start Screen for the game-->
+        <h2>Start New Quiz</h2>
+        <form><!--Choose difficulty and enter name-->
+            <input type="radio" id="basic" name="quiz-difficulty" value="basic">
+            <label for="basic">Basic</label>
+            <br>
+            <input type="radio" id="moderate" name="quiz-difficulty" value="moderate">
+            <label for="moderate">Moderate</label>
+            <br>
+            <input type="radio" id="challenging" name="quiz-difficulty" value="challenging">
+            <label for="challenging">Challenging</label>
+            <br>
+            <input type="text" name="playername" placeholder="Enter Name">
+            <input type="submit">
+        </form>
+    </div>
+
 </body>
+<footer></footer>
 </html>
