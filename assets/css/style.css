@@ -1,25 +1,27 @@
+/*Import fonts from google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Play&family=Unbounded:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap');
 
+/*Default fonts for body elements*/
 body{
     font-family: 'Karla' , sans-serif;
     color: slategray;
     font-size: 1vw;
-    text-align: center;
-}
-h1 {
-    font-family:'Unbounded', sans-serif;
-    font-size: 3vw;
-    color: slategray;
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 0.5vw;
-    text-align: center;
 }
 
 .start-style h2 {
     font-family:'Play', sans-serif;
     font-size: 2vw;
     color: slategray;
+}
+
+/*Game logo Design*/
+#game-title {
+    font-family:'Unbounded', sans-serif;
+    font-size: 3vw;
+    color: slategray;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.5vw;
     text-align: center;
 }
