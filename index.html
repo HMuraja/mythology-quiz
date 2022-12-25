@@ -10,8 +10,11 @@
 <body>
     <header> <!--Document header section starts here-->
         <h1 id="game-title">Greek Mythology Quiz</h1>
-        <button>mute</button>
-        <nav>
+        <div id="menu-container">
+            <button>Mute</button>
+            <a href="javascript:void(0);" id="stack-icon" onclick="myFunction()">
+                <i class="fa-solid fa-bars"></i>
+            </a>
             <ul> <!--Navigation Menu goes here-->
                 <li><a href="link to about section">About</a>
                 </li>
@@ -20,7 +23,7 @@
                 <li><a href="link to starting page">Quit Game</a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <section class="start-style"> <!--Start Screen for the game-->
@@ -44,15 +47,16 @@
         <ul class="social-media-links">
             <li>
                 <a href="linkedin.com/in/hilla-muraja-093127114" target="_blank" rel="noopener"
-                    aria-label="Visit my LinkedIn page (opens in a new tab)"><i class="fa-brands fa-linkedin"></i></i></a>
+                    aria-label="Visit my LinkedIn page (opens in a new tab)"><i class="fa-brands fa-linkedin"></i></a>
             </li>
             <li>
                 <a href="https://github.com/HMuraja/mythology-quiz" target="_blank" rel="noopener"
-                    aria-label="See the project in GitHub (opens in a new tab)"><i class="fa-brands fa-github"></i></i></a>
+                    aria-label="See the project in GitHub (opens in a new tab)"><i class="fa-brands fa-github"></i></a>
             </li>
         </ul>
     </footer>
     <!-- font awesome script  -->
     <script src="https://kit.fontawesome.com/abe8d276a8.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
