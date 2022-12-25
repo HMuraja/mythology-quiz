@@ -20,6 +20,18 @@ h2 {
     font-size: 2vw;
     color: slategray;
 }
+/*Header Styling*/
+
+/*header styling*/
+header{
+  background-color: beige;
+  height: 150px;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
 
 /*Game logo Design*/
 #game-title {
@@ -32,9 +44,4 @@ h2 {
     text-align: center;
 }
 
-/*header styling*/
-header{
-  margin: 0;
-  padding: 0;
-  border: none;
-}
+
