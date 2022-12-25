@@ -20,17 +20,16 @@ h2 {
     font-size: 2vw;
     color: slategray;
 }
-/*Header Styling*/
 
-/*header styling*/
+/*HEADER*/
 header{
   background-color: beige;
   height: 150px;
   width: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-
+  position:fixed;
 }
 
 /*Game logo Design*/
@@ -42,5 +41,44 @@ header{
     font-weight: 300;
     letter-spacing: 0.5vw;  
 }
+
+/*Menu container*/
+#menu-container {
+  background-color: beige;
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+#stack-icon {
+  color: slategray;
+  font-size: 3rem;
+}
+
+/*Hidden Menu*/
+#hidden-menu {
+  display: none;
+  background-color: whitesmoke;
+  position: absolute;
+  padding: 10px;
+  max-width: 100%;
+  top: 150px;
+  z-index: 1;
+}
+
+#hidden-menu > a {
+  color: slategray;
+  text-decoration: none;
+  width: 100%;
+  text-align: right;
+  font-size: 1.5vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 
 
