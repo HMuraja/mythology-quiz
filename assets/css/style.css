@@ -48,7 +48,7 @@ header{
   width: 10%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content:space-evenly;
   align-items: center;
   position: absolute;
   right: 0;
@@ -58,6 +58,22 @@ header{
   color: slategray;
   font-size: 3rem;
 }
+
+#stack-icon:hover {
+  color: sienna;
+  text-shadow: 4px 2px 4px #000000;
+}
+
+.fa-volume-high{
+  color: slategray;
+  font-size: 2rem;
+}
+
+.fa-volume-high:hover {
+  color: sienna;
+  text-shadow: 4px 2px 4px #000000;
+}
+
 
 /*Hidden Menu*/
 #hidden-menu {
@@ -79,6 +95,4 @@ header{
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-
 

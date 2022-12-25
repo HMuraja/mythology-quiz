@@ -7,6 +7,5 @@ function myFunction() {
       menuContainer.style.backgroundColor = "beige";
     } else {
       headerLinks.style.display = "block";
-      menuContainer.style.backgroundColor = "whitesmoke";
-    }
+      menuContainer.style.backgroundColor = "whitesmoke";    }
   }
