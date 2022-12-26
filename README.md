@@ -31,7 +31,8 @@ Overview of tests done.
 ---
 ### Content 
 - Questions for this quiz where taken from [trivialbliss.](https://triviabliss.com/categories/greek-mythology/)
-- Icons where taken from [fontawesome.] (www.fontawesome.com)
-- All images have been taken from [pexels.] (https://www.pexels.com/)
+- Icons where taken from [fontawesome.](www.fontawesome.com)
+- All images have been taken from [pexels.](https://www.pexels.com/)
 - Fonts are from [Google Fonts.](https://fonts.google.com/)
+- Radio buttons circles were removed and replaced with the label text by using the code found from [markheat.net](https://markheath.net/post/customize-radio-button-css) website.
 ### Media 

@@ -60,7 +60,7 @@ header{
 }
 
 #stack-icon:hover {
-  color: sienna;
+  color: #DD6E42;
   text-shadow: 4px 2px 4px #000000;
 }
 
@@ -70,7 +70,7 @@ header{
 }
 
 .fa-volume-high:hover {
-  color: sienna;
+  color: #DD6E42;
   text-shadow: 4px 2px 4px #000000;
 }
 
@@ -148,17 +148,32 @@ header{
 }
 
 .start-menu input[type="radio"]:checked + label {
-  background-color: sienna;
-  color: beige;
+  background-color: #DD6E42;
+  color: #f5f5dc;
   box-shadow: 0 0;
   border-radius: 4px;
-  border: solid sienna 2px;
+  border: solid #DD6E42 2px;
 }
 
 .start-menu label:hover {
-  border: solid sienna 2px;
+  border: solid #DD6E42 2px;
   box-shadow: 0 0;
 }
+
+.start-menu input[type="text"]{
+  background-color: beige;
+  color: #708090;
+  box-shadow: 3px 3px 3px black inset;
+  border-radius: 4px;
+  width: 160px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.start-menu input[type="text"]:hover {
+  border: solid #DD6E42 2px;
+}
+
 
 /*Footer styling*/
 footer {
