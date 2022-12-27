@@ -35,4 +35,5 @@ Overview of tests done.
 - All images have been taken from [pexels.](https://www.pexels.com/)
 - Fonts are from [Google Fonts.](https://fonts.google.com/)
 - Radio buttons circles were removed and replaced with the label text by using the code found from [markheat.net](https://markheath.net/post/customize-radio-button-css) website.
+- Changed start game pages submit button to icon button using the code with alteration from stack [overflow](https://stackoverflow.com/questions/30837216/replacing-submit-buttons-with-icon-basics).
 ### Media 
