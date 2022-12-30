@@ -30,7 +30,7 @@ let basicQuestions = [
     corectAnswer: "Ares"
     },
     {
-    question: ´Artemis is greek goddess of what – only one among all gods?´,
+    question: `Artemis is greek goddess of what – only one among all gods?`,
     answers: ["The Needing", "The Wanting", "The Yearning", "The Longing"],
     corectAnswer: "The Longing"
     }
@@ -53,7 +53,7 @@ let moderateQuestions = [
     corectAnswer: "Labyrinth"
     },
     {
-    question: ´Whose son is Phaeton, who attempt to drive his father’s chariot, but is killed by a thunderbolt from Zeus?´,
+    question: `Whose son is Phaeton, who attempt to drive his father’s chariot, but is killed by a thunderbolt from Zeus?`,
     answers: ["Hephaestus", "Apollo", "Hermes"],
     corectAnswer: "Apollo"
     },
@@ -71,7 +71,7 @@ let moderateQuestions = [
 
 let challengingQuestions = [
     {
-    question: ´What was left in Pandora’s box after she released misery and evil?´,
+    question: `What was left in Pandora’s box after she released misery and evil?`,
     answers:["Hope", "Wisdom", "Courage"],
     corectAnswer: "Hope"
     },

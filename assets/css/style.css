@@ -107,6 +107,7 @@ header{
 }
 .start-container {
   background-color: slategray;
+  display: none;
   width: 500px;
   height: 400px;
   padding-top: 50px;
@@ -188,6 +189,74 @@ header{
   color: #DD6E42;
   font-size: 3rem;
 }
+
+/*QUESTION CONTAINER*/
+.question-container{
+  background-color: slategray;
+  width: 500px;
+  height: 400px;
+  color: beige;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  display: static;
+}
+
+.question-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.question-container p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-options button {
+  background-color: slategray;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: auto;
+  border-radius: 4px;
+  color: beige;
+}
+
+.answer-options button:hover {
+  background-color: #DD6E42;
+  color: #f5f5dc;
+  box-shadow: 0 0;
+  border-radius: 4px;
+  border: solid #DD6E42 2px;
+}
+
+.staus-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  }
+
+.fa-chevron-right{
+  font-family: "Karla", sans-serif;
+  background-color: slategray;
+  color: beige;
+  font-size: 2.5rem;
+}
+
+.fa-chevron-right:hover{
+  color: #DD6E42;
+}
+
 
 /*Footer styling*/
 footer {
