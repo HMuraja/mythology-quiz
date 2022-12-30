@@ -257,6 +257,33 @@ header{
   color: #DD6E42;
 }
 
+/*FINISH CONTAINER*/
+.finish-container{
+  background-color: slategray;
+  width: 500px;
+  height: 400px;
+  color: beige;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fa-rotate-left{
+  background-color: slategray;
+  color: beige;
+  font-size: 2.5rem;
+}
+
+.fa-rotate-left:hover{
+  color: #DD6E42;
+}
+
+
 /*Footer styling*/
 footer {
   background-color: slategray;
