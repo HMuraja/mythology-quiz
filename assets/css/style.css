@@ -200,7 +200,7 @@ header{
   position: relative;
   text-align: center;
   padding: 10px;
-  display: none;
+  display: static;
 }
 
 .question-container h2 {
@@ -267,7 +267,7 @@ header{
   position: relative;
   text-align: center;
   padding: 10px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
