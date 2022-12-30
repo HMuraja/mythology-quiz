@@ -107,7 +107,7 @@ header{
 }
 .start-container {
   background-color: slategray;
-  display: none;
+  display: static;
   width: 500px;
   height: 400px;
   padding-top: 50px;
@@ -200,7 +200,7 @@ header{
   position: relative;
   text-align: center;
   padding: 10px;
-  display: static;
+  display: none;
 }
 
 .question-container h2 {
@@ -282,7 +282,6 @@ header{
 .fa-rotate-left:hover{
   color: #DD6E42;
 }
-
 
 /*Footer styling*/
 footer {
