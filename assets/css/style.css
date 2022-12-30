@@ -200,7 +200,7 @@ header{
   position: relative;
   text-align: center;
   padding: 10px;
-  display: static;
+  display: none;
 }
 
 .question-container h2 {
@@ -256,7 +256,6 @@ header{
 .fa-chevron-right:hover{
   color: #DD6E42;
 }
-
 
 /*Footer styling*/
 footer {
