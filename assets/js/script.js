@@ -14,12 +14,5 @@ function dropMenu() {
         }
   }
 
-  /*event listener for radio selection*/
-  function generateQuestionList(listItem){
-    selectedDifficulty= listItem;
-    questionSelector=[]
-    for (let i=0; i < 3; i++){
-      questionSelector.push = Math.floor(Math.random() * 8);
-      console.log(questionSelector)
-    }
-  }
+
+
