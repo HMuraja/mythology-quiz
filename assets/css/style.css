@@ -105,9 +105,9 @@ header{
   align-items: center;
   justify-content: center;
 }
-.start-container {
+#start-container {
   background-color: slategray;
-  display: static;
+  display:static;
   width: 500px;
   height: 400px;
   padding-top: 50px;
@@ -117,7 +117,7 @@ header{
   border-radius: 5px;
 }
 
-.start-container h2 {
+#start-container h2 {
   font-size: 3rem;
   padding-bottom: 20px;
 }
@@ -191,7 +191,7 @@ header{
 }
 
 /*QUESTION CONTAINER*/
-.question-container{
+#question-container{
   background-color: slategray;
   width: 500px;
   height: 400px;
@@ -200,14 +200,14 @@ header{
   position: relative;
   text-align: center;
   padding: 10px;
-  display: none;
+  display:none;
 }
 
-.question-container h2 {
+#question-container h2 {
   font-size: 2rem;
   margin-bottom: 15px;
 }
-.question-container p {
+#question-container p {
   font-size: 1rem;
   margin-bottom: 15px;
 }
