@@ -27,7 +27,7 @@
 
     <section class="start-container"> <!--Start Screen for the game-->
         <h2>Start New Quiz</h2>
-        <form class="start-menu"><!--Choose difficulty and enter name-->
+        <form class="start-menu" id="start-form"><!--Choose difficulty and enter name-->
             <input type="radio" id="basic" name="quiz-difficulty" value="basic" required>
             <label for="basic" class="game-level">Basic</label>
             <br>
@@ -37,7 +37,7 @@
             <input type="radio" id="challenging" name="quiz-difficulty" value="challenging">
             <label for="challenging" class="game-level">Challenging</label>
             <br>
-            <input type="text" name="playername" placeholder="Enter Name" required>
+            <input type="text" name="player-name" placeholder="Enter Name" id="player-name" required>
             <button type="submit" id="start-game"><i class="fa-regular fa-circle-play"></i><button>
         </form>
     </section>

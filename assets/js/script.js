@@ -13,6 +13,3 @@ function dropMenu() {
       stack.innerHTML = `<i class="fa-solid fa-x"></i>`;
         }
   }
-
-
-
