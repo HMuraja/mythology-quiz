@@ -66,6 +66,11 @@ let moderateQuestions = [
     question: "Artemis is greek goddess of what, only one among all gods?",
     answers: ["Harvest and agriculture", "Virginity and chastity", "Hunt and music"],
     corectAnswer: "Virginity and chastity"
+    },
+    {
+    question: "Who were the guardian spirits of nature in Greek mythology?",
+    answers: ["Muses", "Nymphs", "Titans"],
+    corectAnswer: "Nymphs"
     }
 ];
 
