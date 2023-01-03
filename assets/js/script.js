@@ -59,8 +59,8 @@ startForm.addEventListener('submit', startQuiz);
 function startQuiz(event){
   event.preventDefault();
   loadQuiz(event);
-  savePlayerInfo();
-
+  let playerInfo=savePlayerInfo();
+  let questionList=generateQuestionList(playerInfo.difficulty);
 }
 
 /*Function hides start window and opens the quiz window*/
