@@ -61,6 +61,7 @@ function startQuiz(event){
   loadQuiz(event);
   let playerInfo=savePlayerInfo();
   let questionList=generateQuestionList(playerInfo.difficulty);
+  displayQuestion(questionList);
 }
 
 /*Function hides start window and opens the quiz window*/
@@ -83,4 +84,16 @@ function savePlayerInfo(){
   playerObject.difficulty=selectedSize;
   playerObject.name = playerName.value;
   return playerObject;
+}
+
+/*Function that displays the questions*/
+function displayQuestion(questionList){
+  let question= document.getElementById("question");
+  question.innerHTML=`${questionList[0].question}`;
+
+  let answerOptions= document.getElementById("answers");
+  let answerList=questionList[0].answers;
+  answerOptions.innerHTML= `<button class="options">${answerList[0]}</button>
+  <button class="options">${answerList[1]}</button>
+  <button class="options">${answerList[2]}</button>`;            
 }
