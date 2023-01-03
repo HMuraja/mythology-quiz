@@ -57,4 +57,30 @@ startForm.addEventListener('submit', startQuiz);
 
 /*Game function*/
 function startQuiz(event){
+  event.preventDefault();
+  loadQuiz(event);
+  savePlayerInfo();
+
+}
+
+/*Function hides start window and opens the quiz window*/
+function loadQuiz(event){
+  event.preventDefault();
+  startWindow.style.display="none";
+  questionWindow.style.display= "inline";
+}
+
+/*Function to save player information post submission*/
+function savePlayerInfo(){
+  let playerObject={};
+  let playerName = document.getElementById("player-name");
+  for (const option of difficultyOptions) {
+      if (option.checked) {
+          selectedSize = option.value;
+          break;
+      }
+    }
+  playerObject.difficulty=selectedSize;
+  playerObject.name = playerName.value;
+  return playerObject;
 }
