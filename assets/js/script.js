@@ -44,3 +44,17 @@ function selectList(gameLevel){
     list=challengingQuestions;
   }return list;
 }
+
+/*Game window references*/
+const startWindow= document.getElementById("start-container");
+const questionWindow = document.getElementById("question-container");
+const startForm = document.getElementById("start-form");
+const difficultyOptions = document.querySelectorAll("input[name='quiz-difficulty']");
+
+
+/*Event listeners that initiates the game after game difficulty and username has been submitted*/
+startForm.addEventListener('submit', startQuiz);
+
+/*Game function*/
+function startQuiz(event){
+}
