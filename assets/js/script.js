@@ -5,6 +5,7 @@ const startForm = document.getElementById("start-form");
 const difficultyOptions = document.querySelectorAll("input[name='quiz-difficulty']");
 const nextQuizBtn = document.getElementById("next-quiz");
 const answerFeedback = document.getElementById("answer-feedback");
+const scoreHtml= document.getElementById("score");
 
 /*Event listeners that initiates the game after game difficulty and username has been submitted*/
 startForm.addEventListener('submit', displayQuiz);
@@ -92,16 +93,14 @@ function displayQuiz(event){
 
     function tagPlayersAnswer(event){//Tags player answer with ID="player-answer"
       this.setAttribute('id', 'player-answer');
-      console.log(this);
-      checkAnswer(pickedQuizzes, answerBtns);
+      checkAnswer(pickedQuizzes, answerBtns, playerInfo);
       }
     }
 }
 
 ////////////////////////////////////// CHECK PLAYER'S ANSWER
 
-function checkAnswer(pickedQuizzes, answerBtns){
-  console.log("made it")
+function checkAnswer(pickedQuizzes, answerBtns, playerInfo){
   let feedbackHtml = document.getElementById("answer-feedback");
   let selectedAnswer = document.getElementById('player-answer');
   let correctAnswer = pickedQuizzes[currentQuizToDisplay].correctAnswer;
@@ -113,8 +112,9 @@ function checkAnswer(pickedQuizzes, answerBtns){
   }
   selectedAnswer.style.color="black";
   if (selectedAnswer.textContent == correctAnswer){
-    correctAnswerHtml.innerHTML = `'${correctAnswer}' <i class="fa-solid fa-check"></i>`
+    correctAnswerHtml.innerHTML = `${correctAnswer} <i class="fa-solid fa-check"></i>`;
     feedbackHtml.innerHTML= `Bravo '${correctAnswer}' is the correct answer!`;
+    scoreHtml.innerHTML= `${addPoints(playerInfo)}`;
     nextQuizBtn.addEventListener('click', displayQuiz); 
 
   } else {
@@ -149,4 +149,19 @@ function savePlayerInfo(){
   playerObject.difficulty=selectedSize;
   playerObject.name = playerName.value;
   return playerObject;
-}
+  }
+  //////////////////////////////////
+
+  function addPoints(playerInfo){
+    console.log(playerInfo);
+    let currentScore = parseInt(scoreHtml.textContent);
+    if (playerInfo.difficulty == 'basic'){
+      currentScore += 5;
+    } else if (playerInfo.difficulty == 'moderate'){
+      currentScore += 10;
+    } else {
+      currentScore += 15;
+    };
+    console.log(currentScore);
+    return currentScore;
+  }
