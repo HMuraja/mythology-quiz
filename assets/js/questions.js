@@ -1,113 +1,113 @@
-let basicQuestions = [
+let basicQuizzes = [
     {
     question: "Which creature in Greek mythology was half-man and half-bull?",
-    answers:["Minotaur", "Centaur", "Faun"],
-    corectAnswer: "Minotaur"
+    options:["Minotaur", "Centaur", "Faun"],
+    correctAnswer: "Minotaur"
     },
     {
     question: "Olympians were cinsidered to be the major gods among greek mythology, how many where they?",
-    answers: ["6", "16", "12"],
-    corectAnswer: "12"
+    options: ["6", "16", "12"],
+    correctAnswer: "12"
     },
     {
     question: "Who was the beautiful youth that Greek goddess Aphrodite loved?",
-    answers: ["Eros", "Adonis", "Ganymede"],
-    corectAnswer: "Adonis"
+    options: ["Eros", "Adonis", "Ganymede"],
+    correctAnswer: "Adonis"
     },
     {
     question: "Which one of the following was both God of the Underworld and God of the Dead?",
-    answers: ["Hephaestus", "Hades", "Poseidon"],
-    corectAnswer: "Hades"
+    options: ["Hephaestus", "Hades", "Poseidon"],
+    correctAnswer: "Hades"
     },
     {
     question: "Who was the god of love and love, lust, beauty, pleasure, passion,",
-    answers: ["Hera", "Aphrodite", "Athena"],
-    corectAnswer: "Aphrodite"
+    options: ["Hera", "Aphrodite", "Athena"],
+    correctAnswer: "Aphrodite"
     },
     {
     question: "Who was the god of war and courage, but also personifies brutality and bloodlust?",
-    answers: ["Athena", "Ares", "Kratos"],
-    corectAnswer: "Ares"
+    options: ["Athena", "Ares", "Kratos"],
+    correctAnswer: "Ares"
     },
     {
     question: `Artemis is greek goddess of what – only one among all gods?`,
-    answers: ["The Needing", "The Wanting", "The Yearning", "The Longing"],
-    corectAnswer: "The Longing"
+    options: ["Harvest and agriculture", "Virginity and chastity", "Hunt and music"],
+    correctAnswer: "Virginity and chastity"
     }
 ];
 
-let moderateQuestions = [
+let moderateQuizzes = [
     {
     question: "According to legend, who fired the arrow that hit Achilles in the heel, his only vulnerable spot?",
-    answers:["Paris", "Hermes", "His mother"],
-    corectAnswer: "Paris"
+    options:["Paris", "Hermes", "His mother"],
+    correctAnswer: "Paris"
     },
     {
     question: "Who was the mythical Greek hunter after whom a constellation is named?",
-    answers: ["Orion", "Pleiades", "Ursa Major"],
-    corectAnswer: "Orion"
+    options: ["Orion", "Pleiades", "Ursa Major"],
+    correctAnswer: "Orion"
     },
     {
     question: "What did Daedalus construct for King Minos so that he could keep the Minotaur there?",
-    answers: ["Golden Cage", "Labyrinth", "A walled enclosure"],
-    corectAnswer: "Labyrinth"
+    options: ["Golden Cage", "Labyrinth", "A walled enclosure"],
+    correctAnswer: "Labyrinth"
     },
     {
     question: `Whose son is Phaeton, who attempt to drive his father’s chariot, but is killed by a thunderbolt from Zeus?`,
-    answers: ["Hephaestus", "Apollo", "Hermes"],
-    corectAnswer: "Apollo"
+    options: ["Hephaestus", "Apollo", "Hermes"],
+    correctAnswer: "Apollo"
     },
     {
     question: "In Greek mythology, who was the goddess of the rainbow? ",
-    answers: ["Hebe", "Iris", "Electra"],
-    corectAnswer: "Iris"
+    options: ["Hebe", "Iris", "Electra"],
+    correctAnswer: "Iris"
     },
     {
     question: "Artemis is greek goddess of what, only one among all gods?",
-    answers: ["Harvest and agriculture", "Virginity and chastity", "Hunt and music"],
-    corectAnswer: "Virginity and chastity"
+    options: ["Harvest and agriculture", "Virginity and chastity", "Hunt and music"],
+    correctAnswer: "Virginity and chastity"
     },
     {
     question: "Who were the guardian spirits of nature in Greek mythology?",
-    answers: ["Muses", "Nymphs", "Titans"],
-    corectAnswer: "Nymphs"
+    options: ["Muses", "Nymphs", "Titans"],
+    correctAnswer: "Nymphs"
     }
 ];
 
-let challengingQuestions = [
+let challengingQuizzes = [
     {
     question: `What was left in Pandora’s box after she released misery and evil?`,
-    answers:["Hope", "Wisdom", "Courage"],
-    corectAnswer: "Hope"
+    options:["Hope", "Wisdom", "Courage"],
+    correctAnswer: "Hope"
     },
     {
     question:"Orpheus went into the underworld to rescue who?",
-    answers: ["Eurydice", "Persephone", "Aphrodite"],
-    corectAnswer: "Eurydice"
+    options: ["Eurydice", "Persephone", "Aphrodite"],
+    correctAnswer: "Eurydice"
     },
     {
     question: "Who fell in love with a statue he had carved?",
-    answers: ["Pygmalion", "Prometheus", "King Midas"],
-    corectAnswer: "Pygmalion"
+    options: ["Pygmalion", "Prometheus", "King Midas"],
+    correctAnswer: "Pygmalion"
     },
     {
     question: "In greek mythology clio was the muse of what?",
-    answers: ["Poetry", "Dance", "History"],
-    corectAnswer: "History"
+    options: ["Poetry", "Dance", "History"],
+    correctAnswer: "History"
     },
     {
     question: "Who was the titan who famously devoured his children, also the father of Zeus?",
-    answers: ["Cronus", "Uranus", "Pontus"],
-    corectAnswer: "Cronus"
+    options: ["Cronus", "Uranus", "Pontus"],
+    correctAnswer: "Cronus"
     },
     {
     question: "Parnassus was the sacred mountain home of the muses and which Greek god?",
-    answers: ["Athena", "Hephaistus", "Apollo"],
-    corectAnswer: "Apollo"
+    options: ["Athena", "Hephaistus", "Apollo"],
+    correctAnswer: "Apollo"
     },
     {
     question: "Who were Erybus, the darkness and Nyx, the night?",
-    answers: ["First two creations born out of chaos", "Deities that were released from Pandoras box", "Children of Gaia"],
-    corectAnswer: "First two creations born out of chaos"
+    options: ["First two creations born out of chaos", "Deities that were released from Pandoras box", "Children of Gaia"],
+    correctAnswer: "First two creations born out of chaos"
     }
 ];

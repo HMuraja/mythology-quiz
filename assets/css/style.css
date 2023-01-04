@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   border: none;
+  font-family: 'Karla';
 }
 
 /*Default fonts for body elements*/
@@ -217,7 +218,7 @@ header{
   flex-direction: column;
 }
 
-.answer-options button {
+.options {
   background-color: slategray;
   font-family: "Karla", sans-serif;
   font-size: 1rem;
@@ -226,6 +227,18 @@ header{
   width: auto;
   border-radius: 4px;
   color: beige;
+}
+
+.options .fa-check{
+  background-color: none;
+  font-size: 1rem;
+  color: greenyellow;
+}
+
+.options .fa-x{
+  background-color: none;
+  font-size: 1rem;
+  color: red;
 }
 
 .answer-options button:hover {
