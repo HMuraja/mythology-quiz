@@ -11,7 +11,7 @@ const questionNumberHtml = document.getElementById("question-number");
 const timeLeft = document.getElementById("time-left");
 
 /*Event listeners that initiates the game after game difficulty and username has been submitted*/
-startForm.addEventListener('submit', displayQuiz);
+startForm.addEventListener('submit', setUpQuiz);
 let questionNumber = 0;
 let playerScore = 0;
 let playerInfo;
@@ -69,20 +69,23 @@ function getAllQuestionsOfDifficulty(playerInfo){
 }
 
 
-//////////////////////// FUNCTION THAT DISPLAYS QUESTIONS
+//////////////////////// DOWLOAD QUESTIONS
 
-function displayQuiz(event){
-
+function setUpQuiz(event){
   event.preventDefault();
+  let playerInfo = savePlayerInfo();
+  let pickedQuestionArray = getThreeRandomQuestions(playerInfo);
+  switchWindows(event);
+  displayQuiz(pickedQuestionArray);
+}
+
+function displayQuiz(pickedQuestionArray){
   let feedbackHtml = document.getElementById("answer-feedback");//clear the feed-back section after previous question
   feedbackHtml.innerHTML= ``;
-  let playerInfo = savePlayerInfo();
   updateQuestionNumberHtml();
-  let pickedQuestionArray = getThreeRandomQuestions(playerInfo);
   if (questionNumber == pickedQuestionArray.length){
-    displayFinalWindow(playerInfo)
+    displayFinalWindow(playerInfo);
   }
-  switchWindows(event);
   let questionHtml = document.getElementById("question");
   questionHtml.innerHTML = pickedQuestionArray[questionNumber].question;
   let optionsHtml = document.getElementById("answers");
