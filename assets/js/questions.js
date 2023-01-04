@@ -1,4 +1,4 @@
-let basicQuizzes = [
+let basicQuestions = [
     {
     question: "Which creature in Greek mythology was half-man and half-bull?",
     options:["Minotaur", "Centaur", "Faun"],
@@ -36,7 +36,7 @@ let basicQuizzes = [
     }
 ];
 
-let moderateQuizzes = [
+let moderateQuestions = [
     {
     question: "According to legend, who fired the arrow that hit Achilles in the heel, his only vulnerable spot?",
     options:["Paris", "Hermes", "His mother"],
@@ -74,7 +74,7 @@ let moderateQuizzes = [
     }
 ];
 
-let challengingQuizzes = [
+let challengingQuestions= [
     {
     question: `What was left in Pandora’s box after she released misery and evil?`,
     options:["Hope", "Wisdom", "Courage"],
