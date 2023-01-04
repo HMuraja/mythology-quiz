@@ -5,7 +5,9 @@ const startForm = document.getElementById("start-form");
 const difficultyOptions = document.querySelectorAll("input[name='quiz-difficulty']");
 const nextQuizBtn = document.getElementById("next-quiz");
 const answerFeedback = document.getElementById("answer-feedback");
-const scoreHtml= document.getElementById("score");
+const scoreHtml = document.getElementById("score");
+const questionNumberHtml = document.getElementById("question-number");
+const timeLeft = document.getElementById("time-left");
 
 /*Event listeners that initiates the game after game difficulty and username has been submitted*/
 startForm.addEventListener('submit', displayQuiz);
@@ -70,6 +72,7 @@ function displayQuiz(event){
   event.preventDefault();
   let feedbackHtml = document.getElementById("answer-feedback");//clear the feed-back section after previous question
   feedbackHtml.innerHTML= ``;
+  updateQuestionNumber();
   switchWindows(event);
   let playerInfo = savePlayerInfo();
   let pickedQuizzes = getThreeRandomQuizzes(playerInfo);
@@ -82,7 +85,6 @@ function displayQuiz(event){
   `<button class="options">${options[0]}</button>
   <button class="options">${options[1]}</button>
   <button class="options">${options[2]}</button>`;            
-
   let answerBtns = document.getElementsByClassName("options");
   for (i of answerBtns) {
     i.addEventListener('click', tagPlayersAnswer);
@@ -158,3 +160,9 @@ function savePlayerInfo(){
     };
     return currentScore;
   }
+
+//////////////////////// QUESTION NUMBER INCREMENTING FUNCTION
+function updateQuestionNumber(){
+  let currentQuestionNumber = parseInt(questionNumberHtml.textContent);
+  questionNumberHtml.innerHTML=  `${currentQuestionNumber += 1}`;
+}
