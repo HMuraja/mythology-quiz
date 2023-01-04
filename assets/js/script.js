@@ -11,8 +11,7 @@ const scoreHtml= document.getElementById("score");
 startForm.addEventListener('submit', displayQuiz);
 let currentQuizToDisplay = 0;
 
-/////////////////////////////////////////////////////////////////////
-/*Game window references*/
+//////////////////////// FUNCTION FOR DROPDOWN MENU
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function dropMenu() {
     var headerLinks = document.getElementById("hidden-menu");
@@ -29,9 +28,8 @@ function dropMenu() {
         }
   }
 
-  /////////////////////////////////////////////////////////////////////
+//////////////////////// FUNCTION THAT SELECTS THREE QUESTIONS OF QUIZ ARRAY
 
-/*Generate a list of random questions*/
 function getThreeRandomQuizzes(playerInfo){
   let allQuizzes = getAllQuizzesOfDifficulty(playerInfo);
   let selectedIndexes = [];
@@ -49,9 +47,8 @@ function getThreeRandomQuizzes(playerInfo){
   return selectedQuizzes;
 }
 
-/////////////////////////////////////////////////////////////////////
+//////////////////////// FUNCTION THAT RETRIEVES THE QUIZ ARRAY FOR THE DIFFICULTY
 
-/*Retrieve the quiz array based on game level selected*/
 function getAllQuizzesOfDifficulty(playerInfo){
   let selectedQuizzes;
   if (playerInfo.difficulty=='basic'){
@@ -66,9 +63,8 @@ function getAllQuizzesOfDifficulty(playerInfo){
 }
 
 
-/////////////////////////////////////////////////////////////////////
+//////////////////////// FUNCTION THAT DISPLAYS QUESTIONS
 
-/*Game function*/
 function displayQuiz(event){
  
   event.preventDefault();
@@ -98,7 +94,7 @@ function displayQuiz(event){
     }
 }
 
-////////////////////////////////////// CHECK PLAYER'S ANSWER
+//////////////////////// FUNCTION THAT CHECK PLAYER'S ANSWER
 
 function checkAnswer(pickedQuizzes, answerBtns, playerInfo){
   let feedbackHtml = document.getElementById("answer-feedback");
@@ -125,18 +121,16 @@ function checkAnswer(pickedQuizzes, answerBtns, playerInfo){
     nextQuizBtn.addEventListener('click', displayQuiz); 
   }
 }
-/////////////////////////////////////////////////////////////////////
+//////////////////////// FUNCTION THAT SWITCHES BETWEEN START AND GAME WINDOW
 
-/*Function hides start window and opens the quiz window*/
 function switchWindows(event){
   event.preventDefault();
   startWindow.style.display="none";
   questionWindow.style.display= "inline";
 }
 
-/////////////////////////////////////////////////////////////////////
+//////////////////////// FUNCTION THAT SAVES PLAYER INFORMATION
 
-/*Function to save player information post submission*/
 function savePlayerInfo(){
   let playerObject={};
   let playerName = document.getElementById("player-name");
@@ -150,10 +144,10 @@ function savePlayerInfo(){
   playerObject.name = playerName.value;
   return playerObject;
   }
-  //////////////////////////////////
+
+ //////////////////////// SCORE BUILDING FUNCTION
 
   function addPoints(playerInfo){
-    console.log(playerInfo);
     let currentScore = parseInt(scoreHtml.textContent);
     if (playerInfo.difficulty == 'basic'){
       currentScore += 5;
@@ -162,6 +156,5 @@ function savePlayerInfo(){
     } else {
       currentScore += 15;
     };
-    console.log(currentScore);
     return currentScore;
   }
