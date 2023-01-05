@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Play&family=Unbounded:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap');
 
+/*Default styles*/
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +10,27 @@
   font-family: 'Karla';
 }
 
-.orange-when-hovered:hover{
-
+.logo-beige{
+  color:#f5f5dc;
+  background-color: slategray;
+  font-size: 2.5rem;
 }
-/*Default fonts for body elements*/
+
+.logo-beige:hover{
+  color:#DD6E42;
+  text-shadow: 4px 2px 4px #000000;
+}
+
+.orange-background:hover{
+  background-color: #DD6E42;
+  text-shadow: 4px 2px 4px #000000;
+}
+
+.orange-border:hover {
+  border: solid #DD6E42 2px;
+  box-shadow: 0 0;
+}
+
 body{
     font-family: 'Karla' , sans-serif;
     font-size: 62.5%; /*Idea taken to use scaling of percentage in question as per article: https://blog.logrocket.com/using-em-vs-rem-css/ */
@@ -22,7 +40,6 @@ h2 {
     font-family:'Play', sans-serif;
     font-size: 2.5rem;
     padding-bottom: 20px;
-
 }
 
 button {
@@ -115,6 +132,7 @@ header{
   align-items: center;
   justify-content: center;
 }
+
 #start-container {
   background-color: slategray;
   display: inlin;
@@ -185,16 +203,6 @@ header{
   margin-top: 25px;
 }
 
-.fa-circle-play{
-  color: beige;
-  font-size: 3rem;
-}
-
-.fa-circle-play:hover{
-  color: #DD6E42;
-  font-size: 3rem;
-}
-
 /*QUESTION CONTAINER*/
 #question-container{
   background-color: slategray;
@@ -224,6 +232,7 @@ header{
 .answer-options {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 .options {
@@ -269,25 +278,11 @@ header{
   }
 
 #next-question{
-  background-color: slategray;
-  color: beige;
-  font-size: 2.5rem;
   display:inline;
-}
-
-#next-question:hover{
-  color: #DD6E42;
 }
 
 #finish-game {
-  background-color: slategray;
-  color: beige;
-  font-size: 2.5rem;
   display:inline;
-}
-
-#finish-game:hover{
-  color: #DD6E42;
 }
 
 /*FINISH CONTAINER*/
@@ -306,16 +301,6 @@ header{
   align-items: center;
 }
 
-.fa-rotate-left {
-  background-color: slategray;
-  color: beige;
-  font-size: 2.5rem;
-}
-
-.fa-rotate-left:hover{
-  color: #DD6E42;
-}
-
 /*Footer styling*/
 footer {
   background-color: slategray;
@@ -323,18 +308,15 @@ footer {
   width: 100%;
   display: flex;
   align-content: center;
-  justify-content:center;
+  justify-content: space-between;
   position:fixed;
   bottom: 0
 }
 
 .social-media-links{
   display: flex;
-}
-
-.social-media-links :is(li, i) {
+  justify-content:space-between;
   list-style-type: none;
-  color: beige;
-  font-size: 2rem;
-  padding: 10px;
+  margin: auto;
+  width: 100px;
 }
