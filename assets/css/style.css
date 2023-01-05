@@ -21,16 +21,6 @@
   text-shadow: 4px 2px 4px #000000;
 }
 
-.orange-background:hover{
-  background-color: #DD6E42;
-  text-shadow: 4px 2px 4px #000000;
-}
-
-.orange-border:hover {
-  border: solid #DD6E42 2px;
-  box-shadow: 0 0;
-}
-
 body{
     font-family: 'Karla' , sans-serif;
     font-size: 62.5%; /*Idea taken to use scaling of percentage in question as per article: https://blog.logrocket.com/using-em-vs-rem-css/ */
@@ -46,7 +36,7 @@ button {
   font-size: 1.1rem;
 }
 
-/*HEADER*/
+/*HEADER SECTION*/
 header{
   background-color: beige;
   height: 20%;
@@ -58,7 +48,8 @@ header{
   z-index: 1;
 }
 
-/*Game logo Design*/
+/*Game Name */
+
 #game-title {
     font-family:'Unbounded', sans-serif;
     font-size: 3.5vw;
@@ -69,50 +60,58 @@ header{
 }
 
 /*Menu container*/
-#menu-container {
+#menu-position {
   background-color: beige;
-  width: 10%;
+  width: 200px;
   height: 100%;
-  display: flex;
-  justify-content:space-evenly;
-  align-items: center;
   position: absolute;
-  right: 0;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.burger-menu{
+#menu-drop{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.menu-icon{
   color: slategray;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
-.burger-menu:hover{
+.menu-icon:hover{
   color: #DD6E42;
   text-shadow: 4px 2px 4px #000000;
 }
 
-/*Hidden Menu*/
 #hidden-menu {
   display: none;
   background-color: whitesmoke;
   position: absolute;
-  padding: 10px;
-  max-width: 100%;
-  top: 150px;
-  
+  width: 150px;
+  top: 50px;
+  padding-bottom: 15px;
+  border-radius: 5px;
 }
 
 #hidden-menu > a {
+  display: block;
+  margin-left: 10px;
+  margin-top: 15px;
+  font-size: 1.1rem;
   color: slategray;
   text-decoration: none;
-  width: 100%;
-  font-size: 1.5rem;
-  text-align: right;
-  font-size: 1.5vw;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  background-color: whitesmoke;
+  text-decoration: none;
 }
 
-/*START CONTAINER*/
 .game-area {
   position: absolute;
   top: 20%;
@@ -123,6 +122,7 @@ header{
   justify-content: center;
 }
 
+/*START CONTAINER*/
 #start-container {
   background-color: slategray;
   display: inlin;

@@ -10,15 +10,17 @@
 <body>
     <header> <!--Document header section starts here-->
         <h1 id="game-title">Greek Mythology Quiz</h1>
-        <div id="menu-container">
-            <i class="fa-solid fa-volume-high burger-menu"></i>
-            <a href="javascript:void(0);" onclick="dropMenu()">
-                <i class="fa-solid fa-bars burger-menu"></i>
-            </a>
-            <div id="hidden-menu">
-                <a href="link to about section">About</a>
-                <a href="link to Scoreboard section">Scoreboard</a>
-                <a href="link to starting page">Quit Game</a>
+        <div id="menu-position">
+            <div id="menu-drop">
+                <i class="fa-solid fa-volume-high menu-icon"></i>
+                <a href="javascript:void(0);" onclick="dropMenu()" id="stack-icon">
+                    <i class="fa-solid fa-bars menu-icon"></i>
+                </a>
+                <div id="hidden-menu">
+                    <a href="link to about section" >About</a>
+                    <a href="link to Scoreboard section" >Scoreboard</a>
+                    <a href="link to starting page" >Quit Game</a>
+                </div>
             </div>
         </div>
     </header>
@@ -86,6 +88,6 @@
     <!-- font awesome script  -->
     <script src="https://kit.fontawesome.com/abe8d276a8.js" crossorigin="anonymous"></script>
     <script src="assets/js/questions.js"></script>
-    <!-- <script src="assets/js/script.js"></script> -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
