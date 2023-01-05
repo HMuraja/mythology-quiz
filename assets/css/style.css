@@ -80,22 +80,12 @@ header{
   right: 0;
 }
 
-#stack-icon {
-  color: slategray;
-  font-size: 3rem;
-}
-
-#stack-icon:hover {
-  color: #DD6E42;
-  text-shadow: 4px 2px 4px #000000;
-}
-
-.fa-volume-high{
+.burger-menu{
   color: slategray;
   font-size: 2rem;
 }
 
-.fa-volume-high:hover {
+.burger-menu:hover{
   color: #DD6E42;
   text-shadow: 4px 2px 4px #000000;
 }
