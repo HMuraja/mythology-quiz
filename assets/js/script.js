@@ -97,9 +97,7 @@ function setUpQuiz(event){
 function displayQuiz(){
 
   updateQuestionNumberHtml();
-  
   feedbackHtml.innerHTML= ``;//clear the feed-back section after previous question
-  
   questionHtml.innerHTML = pickedQuestionArray[questionNumber].question;
 
   let answerOptions = pickedQuestionArray[questionNumber].options;
@@ -109,8 +107,6 @@ function displayQuiz(){
     <button class="options">${answerOptions[2]}</button>`;
   
   for (i of answerBtns) {
-      
-    
     i.addEventListener('click', tagPlayersAnswer);
       function tagPlayersAnswer(event){//Tags player answer with ID="player-answer"
         this.setAttribute('id', 'player-answer');
@@ -173,7 +169,7 @@ function switchWindows(event){
 function savePlayerInfo(){
   let playerObject={};
   let playerName = document.getElementById("player-name");
-  for (const option of difficultyOptions) {
+  for (let option of difficultyOptions) {
       if (option.checked) {
           selectedSize = option.value;
           break;
@@ -211,12 +207,15 @@ function displayFinalWindow(){
   questionWindow.style.display= "none";
   finishWindow.style.display = "inline";
   totalScoreHtml.innerHTML = `Your total score is ${playerScore} points!`;
-  zeroScoreAndQuestionNo();
+  setValuesForNewGame();
   returnToStart.addEventListener('click', loadStartWindow);
 }
 
-function zeroScoreAndQuestionNo(){
+function setValuesForNewGame(){
   questionNumber = 0;
   playerScore = 0;
-  playerInfo= undefined;
-  return;}
+  playerInfo = undefined;
+  nextQuestionBtn.style.display = 'inline';
+  finishGameBtn.style.display = 'none';
+  startForm.reset(); //https://www.w3schools.com/jsref/met_form_submit.asp
+}
