@@ -9,6 +9,9 @@
   font-family: 'Karla';
 }
 
+.orange-when-hovered:hover{
+
+}
 /*Default fonts for body elements*/
 body{
     font-family: 'Karla' , sans-serif;
@@ -17,6 +20,9 @@ body{
 
 h2 {
     font-family:'Play', sans-serif;
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+
 }
 
 button {
@@ -111,7 +117,7 @@ header{
 }
 #start-container {
   background-color: slategray;
-  display: none;
+  display: inlin;
   width: 500px;
   height: 400px;
   padding-top: 50px;
@@ -119,11 +125,6 @@ header{
   text-align: center;
   color: beige;
   border-radius: 5px;
-}
-
-#start-container h2 {
-  font-size: 3.5rem;
-  padding-bottom: 20px;
 }
 
 .start-menu {
@@ -208,10 +209,6 @@ header{
   display: inline;
 }
 
-#question-container h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
 
 #question-number {
   font-size: 1em;
@@ -286,7 +283,7 @@ header{
   background-color: slategray;
   color: beige;
   font-size: 2.5rem;
-  display:none;
+  display:inline;
 }
 
 #finish-game:hover{
@@ -333,7 +330,6 @@ footer {
 
 .social-media-links{
   display: flex;
-  margin: auto;
 }
 
 .social-media-links :is(li, i) {
