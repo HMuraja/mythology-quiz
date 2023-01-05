@@ -265,14 +265,25 @@ header{
   padding: 20px;
   }
 
-.fa-chevron-right{
-  font-family: "Karla", sans-serif;
+#next-question{
   background-color: slategray;
   color: beige;
   font-size: 2.5rem;
+  display:inline;
 }
 
-.fa-chevron-right:hover{
+#next-question:hover{
+  color: #DD6E42;
+}
+
+#finish-game {
+  background-color: slategray;
+  color: beige;
+  font-size: 2.5rem;
+  display:none;
+}
+
+#finish-game:hover{
   color: #DD6E42;
 }
 
@@ -292,7 +303,7 @@ header{
   align-items: center;
 }
 
-.fa-rotate-left{
+.fa-rotate-left {
   background-color: slategray;
   color: beige;
   font-size: 2.5rem;

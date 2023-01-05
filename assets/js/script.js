@@ -4,7 +4,8 @@ const questionWindow = document.getElementById("question-container");
 const finishWindow= document.getElementById("finish-container");
 const startForm = document.getElementById("start-form");
 const difficultyOptions = document.querySelectorAll("input[name='quiz-difficulty']");
-const nextQuestionBtn = document.getElementById("next-quiz");
+const nextQuestionBtn = document.getElementById("next-question");
+const finishGameBtn = document.getElementById("finish-game");
 const answerFeedback = document.getElementById("answer-feedback");
 const scoreHtml = document.getElementById("score");
 const questionNumberHtml = document.getElementById("question-number");
@@ -137,9 +138,11 @@ function checkAnswer(){
     scoreHtml.innerHTML= playerScore;
     questionNumber++;
     if (questionNumber == pickedQuestionArray.length){
-      nextQuestionBtn.addEventListener('click', displayFinalWindow);} 
+      nextQuestionBtn.style.display= 'none';
+      finishGameBtn.style.display= 'inline';
+      finishGameBtn.addEventListener('click', displayFinalWindow);} 
     else{
-    nextQuestionBtn.addEventListener('click', displayQuiz);}
+      nextQuestionBtn.addEventListener('click', displayQuiz);}
   } 
   
   else {
@@ -149,9 +152,11 @@ function checkAnswer(){
     nextQuestionBtn.addEventListener('click', displayQuiz);
     questionNumber++;
     if (questionNumber == pickedQuestionArray.length){
-      nextQuestionBtn.addEventListener('click', displayFinalWindow);} 
+      nextQuestionBtn.style.display= 'none';
+      finishGameBtn.style.display= 'inline';
+      finishGameBtn.addEventListener('click', displayFinalWindow);} 
     else{
-    nextQuestionBtn.addEventListener('click', displayQuiz);}
+      nextQuestionBtn.addEventListener('click', displayQuiz);}
   }
 }
 
