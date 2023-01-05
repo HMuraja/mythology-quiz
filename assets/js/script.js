@@ -201,7 +201,7 @@ function updateQuestionNumberHtml(){
   return nextQuestionNumber;
 }
 
-///////////////////////// DISPLAY FINISH WINDOW
+// DISPLAY FINISH WINDOW
 
 function displayFinalWindow(){
   questionWindow.style.display= "none";
@@ -211,10 +211,13 @@ function displayFinalWindow(){
   returnToStart.addEventListener('click', loadStartWindow);
 }
 
+// SET VALUES FOR THE NEW GAME
+
 function setValuesForNewGame(){
   questionNumber = 0;
   playerScore = 0;
   playerInfo = undefined;
+  pickedQuestionArray = undefined;
   nextQuestionBtn.style.display = 'inline';
   finishGameBtn.style.display = 'none';
   startForm.reset(); //https://www.w3schools.com/jsref/met_form_submit.asp

@@ -12,13 +12,15 @@
 /*Default fonts for body elements*/
 body{
     font-family: 'Karla' , sans-serif;
-    color: slategray;
-    font-size: 1vw;
+    font-size: 62.5%; /*Idea taken to use scaling of percentage in question as per article: https://blog.logrocket.com/using-em-vs-rem-css/ */
 }
 
 h2 {
     font-family:'Play', sans-serif;
-    font-size: 2vw;
+}
+
+button {
+  font-size: 1.1rem;
 }
 
 /*HEADER*/
@@ -90,6 +92,7 @@ header{
   color: slategray;
   text-decoration: none;
   width: 100%;
+  font-size: 1.5rem;
   text-align: right;
   font-size: 1.5vw;
   margin-top: 10px;
@@ -100,7 +103,7 @@ header{
 .game-area {
   position: absolute;
   top: 20%;
-  bottom: 20%;
+  bottom: 10%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -108,7 +111,7 @@ header{
 }
 #start-container {
   background-color: slategray;
-  display:static;
+  display: none;
   width: 500px;
   height: 400px;
   padding-top: 50px;
@@ -119,14 +122,8 @@ header{
 }
 
 #start-container h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   padding-bottom: 20px;
-}
-
-#question-number {
-  font-size: 1em;
-  padding-bottom: 20px;
-  font-family:'play', sans-serif;
 }
 
 .start-menu {
@@ -149,7 +146,7 @@ header{
   color: slategray;
   width: 80px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1.1rem;
   box-shadow: 3px 3px 3px black;
   border: solid beige 2px;
   border-radius: 4px;
@@ -175,7 +172,7 @@ header{
   border-radius: 4px;
   width: 160px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1.1rem;
 }
 
 .start-menu input[type="text"]:hover {
@@ -203,19 +200,27 @@ header{
   width: 500px;
   height: 400px;
   color: beige;
+  padding-top: 50px;
+  padding-bottom: 50px;
   border-radius: 5px;
   position: relative;
   text-align: center;
-  padding: 10px;
-  display:none;
+  display: inline;
 }
 
 #question-container h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
+
+#question-number {
+  font-size: 1em;
+  padding-bottom: 20px;
+  font-family: inherit;
+}
+
 #question-container p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 15px;
 }
 
@@ -227,7 +232,7 @@ header{
 .options {
   background-color: slategray;
   font-family: "Karla", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 10px;
   margin-bottom: 20px;
   width: auto;
@@ -255,11 +260,12 @@ header{
   border: solid #DD6E42 2px;
 }
 
-.staus-container{
+#staus-container{
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: absolute;
+  font-size: 1.5rem;
   bottom: 0;
   width: 100%;
   padding: 20px;
@@ -316,7 +322,7 @@ header{
 /*Footer styling*/
 footer {
   background-color: slategray;
-  height: 20%;
+  height: 10%;
   width: 100%;
   display: flex;
   align-content: center;
@@ -327,6 +333,7 @@ footer {
 
 .social-media-links{
   display: flex;
+  margin: auto;
 }
 
 .social-media-links :is(li, i) {
