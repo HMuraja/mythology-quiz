@@ -9,13 +9,27 @@ const answerFeedback = document.getElementById("answer-feedback");
 const scoreHtml = document.getElementById("score");
 const questionNumberHtml = document.getElementById("question-number");
 const timeLeft = document.getElementById("time-left");
+const questionHtml = document.getElementById("question");
+const optionsHtml = document.getElementById("answers");
+const answerBtns = document.getElementsByClassName("options");
+const feedbackHtml = document.getElementById("answer-feedback");
+const totalScoreHtml = document.getElementById("score-feedback");
+const returnToStart = document.getElementById("return-start");
 
 /*Event listeners that initiates the game after game difficulty and username has been submitted*/
-startForm.addEventListener('submit', setUpQuiz);
 let questionNumber = 0;
 let playerScore = 0;
 let playerInfo;
+let pickedQuestionArray;
 
+
+document.addEventListener("DOMContentLoaded", loadStartWindow);
+
+function loadStartWindow(){
+  finishWindow.style.display="none"
+  startWindow.style.display="inline"
+  startForm.addEventListener('submit', setUpQuiz);
+}
 
 //////////////////////// FUNCTION FOR DROPDOWN MENU
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
@@ -36,8 +50,8 @@ function dropMenu() {
 
 //////////////////////// FUNCTION THAT SELECTS THREE QUESTIONS OF QUIZ ARRAY
 
-function getThreeRandomQuestions(playerInfo){
-  let allQuestions = getAllQuestionsOfDifficulty(playerInfo);
+function getThreeRandomQuestions(){
+  let allQuestions = getAllQuestionsOfDifficulty();
   let selectedIndexes = [];
   let selectedQuestions = [];
   for (let i=0; i < 3; i++){
@@ -55,7 +69,7 @@ function getThreeRandomQuestions(playerInfo){
 
 //////////////////////// FUNCTION THAT RETRIEVES THE QUIZ ARRAY FOR THE DIFFICULTY
 
-function getAllQuestionsOfDifficulty(playerInfo){
+function getAllQuestionsOfDifficulty(){
   let selectedQuestions;
   if (playerInfo.difficulty=='basic'){
     selectedQuestions=basicQuestions;
@@ -73,70 +87,74 @@ function getAllQuestionsOfDifficulty(playerInfo){
 
 function setUpQuiz(event){
   event.preventDefault();
-  let playerInfo = savePlayerInfo();
-  let pickedQuestionArray = getThreeRandomQuestions(playerInfo);
+  playerInfo = savePlayerInfo();
+  pickedQuestionArray = getThreeRandomQuestions();
   switchWindows(event);
-  displayQuiz(pickedQuestionArray);
+  displayQuiz();
 }
 
-function displayQuiz(pickedQuestionArray){
-  let feedbackHtml = document.getElementById("answer-feedback");//clear the feed-back section after previous question
-  feedbackHtml.innerHTML= ``;
+function displayQuiz(){
+
   updateQuestionNumberHtml();
-  if (questionNumber == pickedQuestionArray.length){
-    displayFinalWindow(playerInfo);
-  }
-  let questionHtml = document.getElementById("question");
+  
+  feedbackHtml.innerHTML= ``;//clear the feed-back section after previous question
+  
   questionHtml.innerHTML = pickedQuestionArray[questionNumber].question;
-  let optionsHtml = document.getElementById("answers");
+
   let answerOptions = pickedQuestionArray[questionNumber].options;
   optionsHtml.innerHTML= 
-  `<button class="options">${answerOptions[0]}</button>
-  <button class="options">${answerOptions[1]}</button>
-  <button class="options">${answerOptions[2]}</button>`;            
-  let answerBtns = document.getElementsByClassName("options");
+    `<button class="options">${answerOptions[0]}</button>
+    <button class="options">${answerOptions[1]}</button>
+    <button class="options">${answerOptions[2]}</button>`;
+  
   for (i of answerBtns) {
+      
+    
     i.addEventListener('click', tagPlayersAnswer);
-
-    function tagPlayersAnswer(event){//Tags player answer with ID="player-answer"
-      this.setAttribute('id', 'player-answer');
-      checkAnswer(pickedQuestionArray, answerBtns, playerInfo, questionNumber);
-      }
-    }
+      function tagPlayersAnswer(event){//Tags player answer with ID="player-answer"
+        this.setAttribute('id', 'player-answer');
+        checkAnswer();}
+  } 
 }
 
 //////////////////////// FUNCTION THAT CHECK PLAYER'S ANSWER
-
-function checkAnswer(pickedQuestions, answerBtns, playerInfo){
-  let feedbackHtml = document.getElementById("answer-feedback");
-  let selectedAnswer = document.getElementById('player-answer');
-  let correctAnswer = pickedQuestions[questionNumber].correctAnswer;
+function checkAnswer(){
+  let selectedAnswer = document.getElementById("player-answer");
+  let correctAnswer = pickedQuestionArray[questionNumber].correctAnswer;
   let correctAnswerHtml;
+
   for (option of answerBtns){
     if (option.textContent.includes(correctAnswer)){
       correctAnswerHtml=option;
-    }
-  }
+    }}
+
   selectedAnswer.style.color="black";
+
   if (selectedAnswer.textContent == correctAnswer){
     correctAnswerHtml.innerHTML = `${correctAnswer} <i class="fa-solid fa-check"></i>`;
     feedbackHtml.innerHTML= `Bravo '${correctAnswer}' is the correct answer!`;
-    let updatedPoints = addPoints(playerInfo);
-    scoreHtml.innerHTML= updatedPoints;
-    questionNumber++ ;
-    nextQuestionBtn.addEventListener('click', displayQuiz); 
-
-  } else {
+    addPoints();
+    scoreHtml.innerHTML= playerScore;
+    questionNumber++;
+    if (questionNumber == pickedQuestionArray.length){
+      nextQuestionBtn.addEventListener('click', displayFinalWindow);} 
+    else{
+    nextQuestionBtn.addEventListener('click', displayQuiz);}
+  } 
+  
+  else {
     correctAnswerHtml.innerHTML = `${correctAnswer} <i class="fa-solid fa-check"></i>`;
     selectedAnswer.innerHTML = `${selectedAnswer.textContent} <i class="fa-solid fa-x"></i>`;
     feedbackHtml.innerHTML= `Sorry '${correctAnswer}' is the correct answer!`;
-    questionNumber++ ;
-    nextQuestionBtn.addEventListener('click', displayQuiz); 
+    nextQuestionBtn.addEventListener('click', displayQuiz);
+    questionNumber++;
+    if (questionNumber == pickedQuestionArray.length){
+      nextQuestionBtn.addEventListener('click', displayFinalWindow);} 
+    else{
+    nextQuestionBtn.addEventListener('click', displayQuiz);}
   }
-
-
-
 }
+
 //////////////////////// FUNCTION THAT SWITCHES BETWEEN START AND GAME WINDOW
 
 function switchWindows(event){
@@ -163,7 +181,7 @@ function savePlayerInfo(){
 
  //////////////////////// SCORE BUILDING FUNCTION
 
-  function addPoints(playerInfo){
+  function addPoints(){
     if (playerInfo.difficulty == 'basic'){
       playerScore += 5;
     } else if (playerInfo.difficulty == 'moderate'){
@@ -171,7 +189,7 @@ function savePlayerInfo(){
     } else {
       playerScore += 15;
     };
-    return playerScore;
+    return;
   }
 
 //////////////////////// QUESTION NUMBER INCREMENTING FUNCTION
@@ -184,7 +202,16 @@ function updateQuestionNumberHtml(){
 
 ///////////////////////// DISPLAY FINISH WINDOW
 
-function displayFinalWindow(playerInfo){
+function displayFinalWindow(){
   questionWindow.style.display= "none";
   finishWindow.style.display = "inline";
+  totalScoreHtml.innerHTML = `Your total score is ${playerScore} points!`;
+  zeroScoreAndQuestionNo();
+  returnToStart.addEventListener('click', loadStartWindow);
 }
+
+function zeroScoreAndQuestionNo(){
+  questionNumber = 0;
+  playerScore = 0;
+  playerInfo= undefined;
+  return;}
