@@ -1,16 +1,16 @@
 // GLOBAL VARIABLES
 
 //Get HTML
-const startWindow= document.getElementById("start-container");
-const questionWindow = document.getElementById("question-container");
-const finishWindow= document.getElementById("finish-container");
+const startWindow= document.getElementById("start-window");
+const questionWindow = document.getElementById("question-window");
+const finishWindow= document.getElementById("finish-window");
 
 const startForm = document.getElementById("start-form");
 const difficultyOptions = document.querySelectorAll("input[name='quiz-difficulty']");
 
-const questionHtml = document.getElementById("question");
-const optionsHtml = document.getElementById("answers");
-const answerBtns = document.getElementsByClassName("options");
+const questionHtml = document.getElementById("quiz-question");
+const optionsHtml = document.getElementById("quiz-answers");
+const answerBtns = document.getElementsByClassName("answers");
 const nextQuestionBtn = document.getElementById("next-question");
 const finishGameBtn = document.getElementById("finish-game");
 const scoreHtml = document.getElementById("score");

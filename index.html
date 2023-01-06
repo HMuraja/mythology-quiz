@@ -27,7 +27,7 @@
 <!--Background photo-->
     <div id="background-img">
 <!--Start Screen for the game-->
-    <section id="start-container" class="game-parent-container"> 
+    <section id="start-window" class="game-parent-container"> 
         <form class="start-menu" id="start-form">
             <h2 class="top-section beige-on-grey">Start New Quiz</h2>
             <div id="game-options-section" class="middle-section">
@@ -48,16 +48,18 @@
         </form>
     </section>
 
-    <section id= "question-container" class="game-parent-container"> <!--Quiz screen for the game-->
+    <section id= "question-window" class="game-parent-container"> <!--Quiz screen for the game-->
         <h2 class="top-section beige-on-grey">Question 
             <span id= question-number>0</span>/3 
             <i class="fa-solid fa-chevron-right beige-on-grey id="next-question"></i>
         </h2>
         <div class="middle-section">
             <p id="quiz-question" class="raised-box grey-on-beige">Question goes here!</p>
-            <button class="options raised-box o-hover beige-on-grey">First Option</button>
-            <button class="options raised-box o-hover beige-on-grey">Second Option</button>
-            <button class="options raised-box o-hover beige-on-grey">Third Option</button>
+            <div id="quiz-answers" class="middle-section">
+                <button class="answer raised-box o-hover beige-on-grey">First Option</button>
+                <button class="answer raised-box o-hover beige-on-grey">Second Option</button>
+                <button class="answer raised-box o-hover beige-on-grey">Third Option</button>
+            </div>
         </div>
         <div id ="staus-container" class="bottom-section beige-on-grey">
             <div id="time-left">30s</div>
@@ -68,7 +70,7 @@
         </div>
     </section>
 
-    <section id = "finish-container" class="game-parent-container"> <!--Finish screen for the game-->
+    <section id = "finish-window" class="game-parent-container"> <!--Finish screen for the game-->
         <h2 class="top-section beige-on-grey"> Finish!</h2>
         <div class="middle-section">
             <p class="grey-on-beige raised-box" id="score-feedback"> Your scored 30 points!</p>
