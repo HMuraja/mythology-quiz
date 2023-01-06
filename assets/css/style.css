@@ -2,43 +2,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Play&family=Unbounded:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap');
 
-/*Default styles*/
+/*General Style*/
 * {
   margin: 0;
   padding: 0;
   border: none;
-  font-family: 'Karla';
+  font-family: 'Karla', sans-serif;
+  font-size: 100%;
+}
+/*GENERAL SYLE*/
+body{
+  font-family: 'Karla' , sans-serif;
+   /*Idea taken to use scaling of percentage in question as per article: https://blog.logrocket.com/using-em-vs-rem-css/ */
 }
 
-.logo-beige{
-  color:#f5f5dc;
+h2, h2>span{
+  font-family:'Play', sans-serif;
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-family:'Unbounded', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.5vw;  
+}
+
+/*STANDARD SETTINGS*/
+.grey-on-beige{
+  background-color: #f5f5dc;
+  color: slategray;
+}
+
+.beige-on-grey{
   background-color: slategray;
-  font-size: 2.5rem;
+  color: #f5f5dc;
 }
 
-.logo-beige:hover{
+.black-on-white{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.raised-box{
+  width: 90%;
+  padding: 10px 5px;
+  box-shadow: 3px 3px 3px black;
+  border: solid beige 2px;
+  border-radius: 4px;
+}
+
+.fa-solid:hover,.fa-regular:hover,.fa-brands:hover{
   color:#DD6E42;
   text-shadow: 4px 2px 4px #000000;
 }
 
-body{
-    font-family: 'Karla' , sans-serif;
-    font-size: 62.5%; /*Idea taken to use scaling of percentage in question as per article: https://blog.logrocket.com/using-em-vs-rem-css/ */
+.o-hover:hover{
+  background-color: #DD6E42;
+  border: solid #DD6E42 2px;
+  border-radius: 4px
 }
 
-h2 {
-    font-family:'Play', sans-serif;
-    font-size: 2.5rem;
-    padding-bottom: 20px;
-}
-
-button {
-  font-size: 1.1rem;
+.fa-solid,.fa-regular,.fa-brands{
+  font-size: 2.5rem;
 }
 
 /*HEADER SECTION*/
 header{
-  background-color: beige;
   height: 20%;
   width: 100%;
   display: flex;
@@ -48,20 +80,8 @@ header{
   z-index: 1;
 }
 
-/*Game Name */
-
-#game-title {
-    font-family:'Unbounded', sans-serif;
-    font-size: 3.5vw;
-    color: slategray;
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 0.5vw;  
-}
-
 /*Menu container*/
 #menu-position {
-  background-color: beige;
   width: 200px;
   height: 100%;
   position: absolute;
@@ -76,43 +96,35 @@ header{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 150px;
+  width: 100%;
   height: 50px;
-  border-radius: 5px;
-}
-
-.menu-icon{
-  color: slategray;
-  font-size: 2.5rem;
-}
-
-.menu-icon:hover{
-  color: #DD6E42;
-  text-shadow: 4px 2px 4px #000000;
 }
 
 #hidden-menu {
   display: none;
-  background-color: whitesmoke;
   position: absolute;
-  width: 150px;
   top: 50px;
-  padding-bottom: 15px;
-  border-radius: 5px;
 }
 
 #hidden-menu > a {
   display: block;
   margin-left: 10px;
   margin-top: 15px;
-  font-size: 1.1rem;
-  color: slategray;
-  text-decoration: none;
-  background-color: whitesmoke;
   text-decoration: none;
 }
 
-.game-area {
+/*GAME SECTION*/
+.game-parent-container{
+  width: 450px;
+  height: 450px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: slategray;
+  text-align: center;
+}
+
+/*background-photo*/
+#background-img {
   position: absolute;
   top: 20%;
   bottom: 10%;
@@ -122,173 +134,69 @@ header{
   justify-content: center;
 }
 
-/*START CONTAINER*/
-#start-container {
-  background-color: slategray;
-  display: inlin;
-  width: 500px;
-  height: 400px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+/*Game window sections - identical for all game windows*/
+
+.top-section{
+  height: 10%;
   text-align: center;
-  color: beige;
-  border-radius: 5px;
 }
 
-.start-menu {
+.middle-section{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  text-decoration: none;
-  list-style-type: none;
-}
-
-.start-menu input[type="radio"]{
-  opacity: 0;
-  position: fixed;
-  width: 0;list-style-type: none;
-}
-.start-menu label {
-  display: inline-block;
-  background-color: beige;
-  color: slategray;
-  width: 80px;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  box-shadow: 3px 3px 3px black;
-  border: solid beige 2px;
-  border-radius: 4px;
-}
-
-.start-menu input[type="radio"]:checked + label {
-  background-color: #DD6E42;
-  color: #f5f5dc;
-  box-shadow: 0 0;
-  border-radius: 4px;
-  border: solid #DD6E42 2px;
-}
-
-.start-menu label:hover {
-  border: solid #DD6E42 2px;
-  box-shadow: 0 0;
-}
-
-.start-menu input[type="text"]{
-  background-color: beige;
-  color: #708090;
-  box-shadow: 3px 3px 3px black inset;
-  border-radius: 4px;
-  width: 160px;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-}
-
-.start-menu input[type="text"]:hover {
-  border: solid #DD6E42 2px;
-}
-
-.start-menu button {
-  background-color: slategray;
-  margin-top: 25px;
-}
-
-/*QUESTION CONTAINER*/
-#question-container{
-  background-color: slategray;
-  width: 500px;
-  height: 400px;
-  color: beige;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-radius: 5px;
-  position: relative;
+  height: 75%;
   text-align: center;
+}
+
+.bottom-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15%;
+  text-align: center;
+}
+
+/*Game windows control display*/
+#start-container {
   display: inline;
 }
 
-
-#question-number {
-  font-size: 1em;
-  padding-bottom: 20px;
-  font-family: inherit;
-}
-
-#question-container p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-}
-
-.answer-options {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-
-.options {
-  background-color: slategray;
-  font-family: "Karla", sans-serif;
-  font-size: 1.1rem;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: auto;
-  border-radius: 4px;
-  color: beige;
-}
-
-.options .fa-check{
-  background-color: none;
-  font-size: 1rem;
-  color: greenyellow;
-}
-
-.options .fa-x{
-  background-color: none;
-  font-size: 1rem;
-  color: red;
-}
-
-.answer-options button:hover {
-  background-color: #DD6E42;
-  color: #f5f5dc;
-  box-shadow: 0 0;
-  border-radius: 4px;
-  border: solid #DD6E42 2px;
-}
-
-#staus-container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: absolute;
-  font-size: 1.5rem;
-  bottom: 0;
-  width: 100%;
-  padding: 20px;
-  }
-
-#next-question{
-  display:inline;
-}
-
-#finish-game {
-  display:inline;
-}
-
-/*FINISH CONTAINER*/
-#finish-container{
-  background-color: slategray;
-  width: 500px;
-  height: 400px;
-  color: beige;
-  border-radius: 5px;
-  position: relative;
-  text-align: center;
-  padding: 10px;
+#question-container{
   display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+}
+
+#finish-container{
+  display: none;
+}
+
+/*START WINDOW SPESIFIC STYLE PROPERTIES*/
+#start-form{
+  display: inline-block;
+  height: 100%;
+  width: 60%;
+}
+
+.radio-btn{ /*https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css*/
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-btn:checked + label{
+  background-color: #DD6E42;
+  border: solid #DD6E42 2px;
+  box-shadow: 0 0;
+}
+
+/*QUESTION WINDOW SPESIFIC STYLE PROPERTIES*/
+
+#time-left, #time-left~div{
+  font-size: 1.5rem;
+}
+#finish-game{
+  display: none;
 }
 
 /*Footer styling*/

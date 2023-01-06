@@ -1,56 +1,98 @@
-// GLOBAL DEFINITIONS
+// GLOBAL VARIABLES
+
+//Get HTML
 const startWindow= document.getElementById("start-container");
 const questionWindow = document.getElementById("question-container");
 const finishWindow= document.getElementById("finish-container");
+
 const startForm = document.getElementById("start-form");
 const difficultyOptions = document.querySelectorAll("input[name='quiz-difficulty']");
-const nextQuestionBtn = document.getElementById("next-question");
-const finishGameBtn = document.getElementById("finish-game");
-const answerFeedback = document.getElementById("answer-feedback");
-const scoreHtml = document.getElementById("score");
-const questionNumberHtml = document.getElementById("question-number");
-const timeLeft = document.getElementById("time-left");
+
 const questionHtml = document.getElementById("question");
 const optionsHtml = document.getElementById("answers");
 const answerBtns = document.getElementsByClassName("options");
-const feedbackHtml = document.getElementById("answer-feedback");
+const nextQuestionBtn = document.getElementById("next-question");
+const finishGameBtn = document.getElementById("finish-game");
+const scoreHtml = document.getElementById("score");
+const questionNumberHtml = document.getElementById("question-number");
+const timeLeft = document.getElementById("time-left");
+
 const totalScoreHtml = document.getElementById("score-feedback");
 const returnToStart = document.getElementById("return-start");
 
-/*Event listeners that initiates the game after game difficulty and username has been submitted*/
+//Global variables for the game
 let questionNumber = 0;
 let playerScore = 0;
 let playerInfo;
 let pickedQuestionArray;
 
-
+//GAME INITIATING EVENT LISTENER
 document.addEventListener("DOMContentLoaded", loadStartWindow);
 
+//FUNCTION FOR DROPDOWN MENU
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu bar icon */
+function dropMenu() {
+  var headerLinks = document.getElementById("hidden-menu");
+  var menuDrop= document.getElementById("menu-drop");
+  var stack= document.getElementById("stack-icon")
+  if (headerLinks.style.display === "block") {
+    headerLinks.style.display = "none";
+    stack.innerHTML = `<i class="fa-solid fa-bars grey-on-beige"></i>`;
+  } else {
+    headerLinks.style.display = "block";
+    stack.innerHTML = `<i class="fa-solid fa-x grey-on-beige"></i>`;
+      }
+}
+
+//GAME FUNCTIONS
+
+//*Function ensure start window is displayed, submit-eventlistener trigger quiz-set-up
 function loadStartWindow(){
   finishWindow.style.display="none"
   startWindow.style.display="inline"
   startForm.addEventListener('submit', setUpQuiz);
 }
 
-//////////////////////// FUNCTION FOR DROPDOWN MENU
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function dropMenu() {
-    var headerLinks = document.getElementById("hidden-menu");
-    var menuDrop= document.getElementById("menu-drop");
-    var stack= document.getElementById("stack-icon")
-    if (headerLinks.style.display === "block") {
-      headerLinks.style.display = "none";
-      menuDrop.style.backgroundColor = "beige";
-      stack.innerHTML = `<i class="fa-solid fa-bars menu-icon"></i>`;
-    } else {
-      headerLinks.style.display = "block";
-      menuDrop.style.backgroundColor = "whitesmoke";
-      stack.innerHTML = `<i class="fa-solid fa-x menu-icon"></i>`;
-        }
+// Function gathers data for running the selected quiz before triggering quiz display
+function setUpQuiz(event){
+  event.preventDefault();
+  playerInfo = savePlayerInfo();
+  pickedQuestionArray = getThreeRandomQuestions();
+  switchWindows(event);
+  displayQuiz();
+}
+
+//Function gathers playerdata(name and difficulty) and store it in playerinfo object
+function savePlayerInfo(){
+  let playerObject={};
+  let playerName = document.getElementById("player-name");
+  for (let option of difficultyOptions) {
+      if (option.checked) {
+          selectedSize = option.value;
+          break;
+      }
+    }
+  playerObject.difficulty=selectedSize;
+  playerObject.name = playerName.value;
+  return playerObject;
   }
 
-//////////////////////// FUNCTION THAT SELECTS THREE QUESTIONS OF QUIZ ARRAY
+  //Function uses playerinfo object to check game difficulty
 
+function getAllQuestionsOfDifficulty(){
+  let selectedQuestions;
+  if (playerInfo.difficulty=='basic'){
+    selectedQuestions=basicQuestions;
+  }
+  else if (playerInfo.difficulty=='moderate'){
+    selectedQuestions=moderateQuestions;
+  }
+  else if (playerInfo.difficulty=='challenging'){
+    selectedQuestions=challengingQuestions;
+  }return selectedQuestions;
+}
+
+//Function uses gets three random questions from the pool of selected questions
 function getThreeRandomQuestions(){
   let allQuestions = getAllQuestionsOfDifficulty();
   let selectedIndexes = [];
@@ -68,32 +110,15 @@ function getThreeRandomQuestions(){
   return selectedQuestions;
 }
 
-//////////////////////// FUNCTION THAT RETRIEVES THE QUIZ ARRAY FOR THE DIFFICULTY
-
-function getAllQuestionsOfDifficulty(){
-  let selectedQuestions;
-  if (playerInfo.difficulty=='basic'){
-    selectedQuestions=basicQuestions;
-  }
-  else if (playerInfo.difficulty=='moderate'){
-    selectedQuestions=moderateQuestions;
-  }
-  else if (playerInfo.difficulty=='challenging'){
-    selectedQuestions=challengingQuestions;
-  }return selectedQuestions;
-}
-
-
-//////////////////////// DOWLOAD QUESTIONS
-
-function setUpQuiz(event){
+//Function switches from start window to quiz window
+function switchWindows(event){
   event.preventDefault();
-  playerInfo = savePlayerInfo();
-  pickedQuestionArray = getThreeRandomQuestions();
-  switchWindows(event);
-  displayQuiz();
+  startWindow.style.display="none";
+  questionWindow.style.display= "inline";
 }
 
+//Function displays question from the array generated based on the questionNumber variable
+//click eventlistener activates check answer once player has chosen theri selection
 function displayQuiz(){
 
   updateQuestionNumberHtml();
@@ -114,7 +139,11 @@ function displayQuiz(){
   } 
 }
 
-//////////////////////// FUNCTION THAT CHECK PLAYER'S ANSWER
+//Function checks players answer and provides feed back for the player
+//Points are increased if correct answer is selected
+//Questionnumber variable is incresed and checked incase array is finished, if finised finish flag is diplayed
+// Listens for next question click to display next question
+
 function checkAnswer(){
   let selectedAnswer = document.getElementById("player-answer");
   let correctAnswer = pickedQuestionArray[questionNumber].correctAnswer;
@@ -156,32 +185,7 @@ function checkAnswer(){
   }
 }
 
-//////////////////////// FUNCTION THAT SWITCHES BETWEEN START AND GAME WINDOW
-
-function switchWindows(event){
-  event.preventDefault();
-  startWindow.style.display="none";
-  questionWindow.style.display= "inline";
-}
-
-//////////////////////// FUNCTION THAT SAVES PLAYER INFORMATION
-
-function savePlayerInfo(){
-  let playerObject={};
-  let playerName = document.getElementById("player-name");
-  for (let option of difficultyOptions) {
-      if (option.checked) {
-          selectedSize = option.value;
-          break;
-      }
-    }
-  playerObject.difficulty=selectedSize;
-  playerObject.name = playerName.value;
-  return playerObject;
-  }
-
- //////////////////////// SCORE BUILDING FUNCTION
-
+//Function increases score according to the selected difficulty
   function addPoints(){
     if (playerInfo.difficulty == 'basic'){
       playerScore += 5;
@@ -193,16 +197,8 @@ function savePlayerInfo(){
     return;
   }
 
-//////////////////////// QUESTION NUMBER INCREMENTING FUNCTION
-function updateQuestionNumberHtml(){
-  let currentQuestionNumber = parseInt(questionNumberHtml.textContent);
-  let nextQuestionNumber = currentQuestionNumber += 1;
-  questionNumberHtml.innerHTML= nextQuestionNumber;
-  return nextQuestionNumber;
-}
 
-// DISPLAY FINISH WINDOW
-
+// Function displays final window, providing player their total score, runs function to refresh game variables and loads start window after player clicks the icon
 function displayFinalWindow(){
   questionWindow.style.display= "none";
   finishWindow.style.display = "inline";
@@ -211,8 +207,7 @@ function displayFinalWindow(){
   returnToStart.addEventListener('click', loadStartWindow);
 }
 
-// SET VALUES FOR THE NEW GAME
-
+// Functiion sets values for the new game
 function setValuesForNewGame(){
   questionNumber = 0;
   playerScore = 0;

@@ -8,66 +8,73 @@
     <title>Document</title>
 </head>
 <body>
-    <header> <!--Document header section starts here-->
+    <header class="grey-on-beige"> <!--Document header section starts here-->
         <h1 id="game-title">Greek Mythology Quiz</h1>
         <div id="menu-position">
             <div id="menu-drop">
-                <i class="fa-solid fa-volume-high menu-icon"></i>
+                <i class="fa-solid fa-volume-high grey-on-beige"></i>
                 <a href="javascript:void(0);" onclick="dropMenu()" id="stack-icon">
-                    <i class="fa-solid fa-bars menu-icon"></i>
+                    <i class="fa-solid fa-bars grey-on-beige"></i>
                 </a>
-                <div id="hidden-menu">
-                    <a href="link to about section" >About</a>
-                    <a href="link to Scoreboard section" >Scoreboard</a>
-                    <a href="link to starting page" >Quit Game</a>
+                <div id="hidden-menu" class="black-on-white raised-box">
+                    <a href="link to about section" class="black-on-white">About</a>
+                    <a href="link to Scoreboard section" class="black-on-white">Scoreboard</a>
+                    <a href="link to starting page" class="black-on-white">Quit Game</a>
                 </div>
             </div>
         </div>
     </header>
-
-    <div class="game-area">
-
-    <section id="start-container"> <!--Start Screen for the game-->
-        <h2>Start New Quiz</h2>
-        <form class="start-menu" id="start-form"><!--Choose difficulty and enter name-->
-            <input type="radio" id="basic" name="quiz-difficulty" value="basic" required>
-            <label for="basic" class="game-level">Basic</label>
-            <br>
-            <input type="radio" id="moderate" name="quiz-difficulty" value="moderate">
-            <label for="moderate" class="game-level">Moderate</label>
-            <br>
-            <input type="radio" id="challenging" name="quiz-difficulty" value="challenging">
-            <label for="challenging" class="game-level">Challenging</label>
-            <br>
-            <input type="text" name="player-name" placeholder="Enter Name" id="player-name" required>
-            <button type="submit" id="start-game"><i class="fa-regular fa-circle-play logo-beige"></i><button>
+<!--Background photo-->
+    <div id="background-img">
+<!--Start Screen for the game-->
+    <section id="start-container" class="game-parent-container"> 
+        <form class="start-menu" id="start-form">
+            <h2 class="top-section beige-on-grey">Start New Quiz</h2>
+            <div id="game-options-section" class="middle-section">
+                <input type="radio" id="basic" name="quiz-difficulty" value="basic" class="radio-btn" required>
+                <label for="basic" class="game-level raised-box beige-on-grey o-hover">Basic</label>
+                <br>
+                <input type="radio" id="moderate" name="quiz-difficulty" value="moderate" class="radio-btn">
+                <label for="moderate" class="game-level raised-box beige-on-grey o-hover">Moderate</label>
+                <br>
+                <input type="radio" id="challenging" name="quiz-difficulty" value="challenging" class="radio-btn">
+                <label for="challenging" class="game-level raised-box beige-on-grey o-hover">Challenging</label>
+                <br>
+                <input type="text" name="player-name" placeholder="Enter Name" id="player-name" class="raised-box" id="fill-box" required>
+            </div>
+            <div id="start-game-section" class="bottom-section">
+                <button type="submit" id="start-game"><i class="fa-regular fa-circle-play beige-on-grey"></i></button>
+            </div>
         </form>
     </section>
 
-    <section id= "question-container"> <!--Quiz screen for the game-->
-        <h2>Question <span id= question-number>0</span>/3</h2>
-        <p id="question">In Greek mythology Medusa’s hair was made of what?</p>
-        <div class="answer-options" id="answers">
-            <button class="options">First Option</button>
-            <button class="options">Second Option</button>
-            <button class="options">Third Option</button>
+    <section id= "question-container" class="game-parent-container"> <!--Quiz screen for the game-->
+        <h2 class="top-section beige-on-grey">Question 
+            <span id= question-number>0</span>/3 
+            <i class="fa-solid fa-chevron-right beige-on-grey id="next-question"></i>
+        </h2>
+        <div class="middle-section">
+            <p id="quiz-question" class="raised-box grey-on-beige">Question goes here!</p>
+            <button class="options raised-box o-hover beige-on-grey">First Option</button>
+            <button class="options raised-box o-hover beige-on-grey">Second Option</button>
+            <button class="options raised-box o-hover beige-on-grey">Third Option</button>
         </div>
-        <p id ="answer-feedback"></p>
-        <div id ="staus-container">
+        <div id ="staus-container" class="bottom-section beige-on-grey">
             <div id="time-left">30s</div>
-            <button type="submit">
-                <i class="fa-solid fa-chevron-right logo-beige" id="next-question"></i>
-                <i class="fa-solid fa-flag-checkered logo-beige" id="finish-game"></i>
+            <button>
+                <i class="fa-solid fa-flag-checkered beige-on-grey" id="finish-game"></i>
             </button>
             <div>Score <span id="score">0</span></div>
         </div>
     </section>
 
-    <section id = "finish-container"> <!--Finish screen for the game-->
-        <h2> Finish!</h2>
-        <p id="score-feedback"> Your scored 30 points!</p>
-        <button type="submit" id="return-start">
-            <i class="fa-solid fa-rotate-left logo-beige"></i>
+    <section id = "finish-container" class="game-parent-container"> <!--Finish screen for the game-->
+        <h2 class="top-section beige-on-grey"> Finish!</h2>
+        <div class="middle-section">
+            <p class="grey-on-beige raised-box" id="score-feedback"> Your scored 30 points!</p>
+        </div>
+        <div id="return-start" class="bottom-section beige-on-grey">
+            <i class="fa-solid fa-rotate-left beige-on-grey"></i>
         </div>
     </section>
 
@@ -77,11 +84,11 @@
         <ul class="social-media-links">
             <li>
                 <a href="linkedin.com/in/hilla-muraja-093127114" target="_blank" rel="noopener"
-                    aria-label="Visit my LinkedIn page (opens in a new tab)"><i class="fa-brands fa-linkedin logo-beige"></i></a>
+                    aria-label="Visit my LinkedIn page (opens in a new tab)"><i class="fa-brands fa-linkedin beige-on-grey"></i></a>
             </li>
             <li>
                 <a href="https://github.com/HMuraja/mythology-quiz" target="_blank" rel="noopener"
-                    aria-label="See the project in GitHub (opens in a new tab)"><i class="fa-brands fa-github logo-beige"></i></a>
+                    aria-label="See the project in GitHub (opens in a new tab)"><i class="fa-brands fa-github beige-on-grey"></i></a>
             </li>
         </ul>
     </footer>
