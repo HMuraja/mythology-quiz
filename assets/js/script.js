@@ -13,6 +13,7 @@ const optionsHtml = document.getElementById("display-text");
 const answerBtns = document.getElementsByClassName("answers");
 const nextQuestionBtn = document.getElementById("next-question");
 const finishGameBtn = document.getElementById("finish-game");
+const moveOnGameBtn = document.getElementById("move-on");
 const scoreHtml = document.getElementById("score");
 const timeLeft = document.getElementById("time-left");
 
@@ -20,7 +21,7 @@ const totalScoreHtml = document.getElementById("score-feedback");
 const returnToStart = document.getElementById("return-start");
 
 //Global variables for the game
-let questionNumber = 0;
+let questionIndex = 0;
 let playerScore = 0;
 let playerInfo;
 let pickedQuestionArray;
@@ -119,16 +120,16 @@ function switchWindows(event){
 //Function displays question from the array generated based on the questionNumber variable
 //click eventlistener activates check answer once player has chosen their selection
 function displayQuiz(){
-  nextQuestionBtn.style.display= 'hidden';
-  questionNumberHtml.innerHTML= updateQuestionNumberHtml();
-  let quizQuestionText = pickedQuestionArray[questionNumber].question;
-  let answerOptionsText = pickedQuestionArray[questionNumber].options;
+  let  questionNumber= questionIndex + 1;
+  let quizQuestionText = pickedQuestionArray[questionIndex].question;
+  let answerOptionsText = pickedQuestionArray[questionIndex].options;
+  questionNumberHtml.innerHTML= questionNumber;
   optionsHtml.innerHTML= 
     `<p id="quiz-question" class="raised-box grey-on-beige">${quizQuestionText}</p>
     <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[0]}</button>
     <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[1]}</button>
     <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[2]}</button>`;
-  
+  moveOnGameBtn.style.visibility = 'hidden';
   for (i of answerBtns) {
     i.addEventListener('click', tagPlayersAnswer);
       function tagPlayersAnswer(event){//Tags player answer with ID="player-answer"
@@ -137,52 +138,49 @@ function displayQuiz(){
   } 
 }
 
-//Function updates question number
-function updateQuestionNumberHtml(){
-  let currentQuestionNumber = parseInt(questionNumberHtml.textContent);
-  let nextQuestionNumber = currentQuestionNumber += 1;
-  questionNumberHtml.innerHTML= nextQuestionNumber;
-  return nextQuestionNumber;
-}
-
 //Function checks players answer and provides feed back for the player
 //Points are increased if correct answer is selected
 //Questionnumber variable is incresed and checked incase array is finished, if finised finish flag is diplayed
 // Listens for next question click to display next question
 
 function checkAnswer(){
-  let selectedAnswer = document.getElementById("player-answer");
-  let correctAnswer = pickedQuestionArray[questionNumber].correctAnswer;
-  let correctAnswerHtml;
+  let selectedOption = document.getElementById("player-answer");
+  let correctOption = pickedQuestionArray[questionIndex].correctAnswer;
+  let correctOptionHtml;
 
-  for (option of answerBtns){
-    if (option.textContent.includes(correctAnswer)){
-      correctAnswerHtml=option;
+  for (i of answerBtns){
+    if (i.textContent.includes(correctOption)){
+      correctOptionHtml = i;
     }}
 
-  selectedAnswer.style.color="black";
+  selectedOption.style.color="black";
+  questionIndex++;
 
-  if (selectedAnswer.textContent == correctAnswer){
-    correctAnswerHtml.innerHTML = `${correctAnswer} <i class="fa-solid fa-check"></i>`;
+  if (selectedOption.textContent == correctOption){
+    correctOptionHtml.innerHTML = `${correctOption} <i class="fa-solid fa-check"></i>`;
     addPoints();
     scoreHtml.innerHTML= playerScore;
-    if (questionNumber == pickedQuestionArray.length){
+    if (questionIndex == pickedQuestionArray.length){
+      moveOnGameBtn.style.visibility= 'visible';
+      nextQuestionBtn.style.display= 'none';
       finishGameBtn.style.display= 'inline';
       finishGameBtn.addEventListener('click', displayFinalWindow);} 
     else{
-      nextQuestionBtn.style.display= 'inline';
+      moveOnGameBtn.style.visibility= 'visible';
       nextQuestionBtn.addEventListener('click', displayQuiz);}
   } 
   
   else {
-    correctAnswerHtml.innerHTML = `${correctAnswer} <i class="fa-solid fa-check"></i>`;
-    selectedAnswer.innerHTML = `${selectedAnswer.textContent} <i class="fa-solid fa-x"></i>`;
+    correctOptionHtml.innerHTML = `${correctOption} <i class="fa-solid fa-check"></i>`;
+    selectedOption.innerHTML = `${selectedOption.textContent} <i class="fa-solid fa-x"></i>`;
     nextQuestionBtn.addEventListener('click', displayQuiz);
-    if (questionNumber == pickedQuestionArray.length){
+    if (questionIndex == pickedQuestionArray.length){
+      moveOnGameBtn.style.visibility= 'visible';
+      nextQuestionBtn.style.display= 'none';
       finishGameBtn.style.display= 'inline';
       finishGameBtn.addEventListener('click', displayFinalWindow);} 
     else{
-      nextQuestionBtn.style.display= 'inline';
+      moveOnGameBtn.style.visibility= 'visible';
       nextQuestionBtn.addEventListener('click', displayQuiz);}
   }
 }
@@ -211,10 +209,12 @@ function displayFinalWindow(){
 
 // Functiion sets values for the new game
 function setValuesForNewGame(){
-  questionNumber = 0;
+  questionIndex = 0;
   playerScore = 0;
+  scoreHtml.innerHTML= 0;
   playerInfo = undefined;
   pickedQuestionArray = undefined;
+  nextQuestionBtn.style.display= 'inline';
   finishGameBtn.style.display = 'none';
   startForm.reset(); //https://www.w3schools.com/jsref/met_form_submit.asp
 }

@@ -209,8 +209,11 @@ header{
   font-size: 1.5rem;
 }
 
+#move-on{
+  visibility: hidden;
+}
 #next-question {
-  display: none;
+  display: inline;
 }
 #finish-game {
   display: none;
