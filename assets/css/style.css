@@ -16,7 +16,7 @@ body{
    /*Idea taken to use scaling of percentage in question as per article: https://blog.logrocket.com/using-em-vs-rem-css/ */
 }
 
-h2, h2>span{
+h2, h2>span {
   font-family:'Play', sans-serif;
   font-size: 2rem;
   padding-bottom: 20px;
@@ -24,26 +24,26 @@ h2, h2>span{
 
 h1 {
   font-family:'Unbounded', sans-serif;
+  color: whitesmoke;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 3vw;
   font-weight: 300;
   letter-spacing: 0.5vw;  
 }
 
 /*STANDARD SETTINGS*/
 .grey-on-beige{
-  background-color: #f5f5dc;
-  color: slategray;
+  background-color: transparent;
+  color: #031F3D;
 }
 
 .beige-on-grey{
-  background-color: slategray;
-  color: #f5f5dc;
+  background-color: #031F3D;
+  color: whitesmoke;
 }
 
 .black-on-white{
-    background-color: whitesmoke;
-    color: black;
+  color: whitesmoke;
 }
 
 .raised-box{
@@ -55,13 +55,13 @@ h1 {
 }
 
 .fa-solid:hover,.fa-regular:hover,.fa-brands:hover{
-  color:#DD6E42;
+  color:#CE951B;
   text-shadow: 4px 2px 4px #000000;
 }
 
 .o-hover:hover{
-  background-color: #DD6E42;
-  border: solid #DD6E42 2px;
+  background-color: #CE951B;
+  border: solid #CE951B 2px;
   border-radius: 4px
 }
 
@@ -75,20 +75,19 @@ header{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  flex-direction: column;
   position:fixed;
   z-index: 1;
 }
 
 /*Menu container*/
 #menu-position {
-  width: 200px;
-  height: 100%;
-  position: absolute;
+  width: inherit;
   right: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 #menu-drop{
@@ -119,12 +118,17 @@ header{
   height: 450px;
   padding: 25px;
   border-radius: 5px;
-  background-color: slategray;
+  background-color: #031F3D;
   text-align: center;
 }
 
 /*background-photo*/
-#background-img {
+#stars{
+  background: url('/assets/images/pexels-rafael-cerqueira-4737484.jpg') no-repeat top;
+  background-size: 100%;
+}
+
+#game-area {
   position: absolute;
   top: 20%;
   bottom: 10%;
@@ -133,7 +137,12 @@ header{
   align-items: center;
   justify-content: center;
 }
+#athena-img{
+  position: inline;
+  max-height: 100%;
 
+  z-index: 1 ;
+}
 /*Game window sections - identical for all game windows*/
 
 .top-section{
@@ -185,8 +194,8 @@ header{
 }
 
 .radio-btn:checked + label{
-  background-color: #DD6E42;
-  border: solid #DD6E42 2px;
+  background-color: #CE951B;
+  border: solid #CE951B 2px;
   box-shadow: 0 0;
 }
 
@@ -195,14 +204,17 @@ header{
 #time-left, #time-left~div{
   font-size: 1.5rem;
 }
+
 #finish-game{
   width: 100%;
 }
+
 .fa-check{
   display: inline;
   color: greenyellow;
   font-size: 1.5rem;
 }
+
 .fa-x{
   display: inline;
   color: red;
@@ -212,15 +224,18 @@ header{
 #move-on{
   visibility: hidden;
 }
+
 #next-question {
   display: inline;
 }
+
 #finish-game {
   display: none;
 }
+
 /*Footer styling*/
 footer {
-  background-color: slategray;
+  background-color: #031F3D;
   height: 10%;
   width: 100%;
   display: flex;
