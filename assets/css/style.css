@@ -209,6 +209,12 @@ header{
   font-size: 1.5rem;
 }
 
+#next-question {
+  display: none;
+}
+#finish-game {
+  display: none;
+}
 /*Footer styling*/
 footer {
   background-color: slategray;

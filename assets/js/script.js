@@ -119,6 +119,7 @@ function switchWindows(event){
 //Function displays question from the array generated based on the questionNumber variable
 //click eventlistener activates check answer once player has chosen their selection
 function displayQuiz(){
+  nextQuestionBtn.style.display= 'hidden';
   questionNumberHtml.innerHTML= updateQuestionNumberHtml();
   let quizQuestionText = pickedQuestionArray[questionNumber].question;
   let answerOptionsText = pickedQuestionArray[questionNumber].options;
@@ -166,10 +167,10 @@ function checkAnswer(){
     addPoints();
     scoreHtml.innerHTML= playerScore;
     if (questionNumber == pickedQuestionArray.length){
-      nextQuestionBtn.style.display= 'none';
       finishGameBtn.style.display= 'inline';
       finishGameBtn.addEventListener('click', displayFinalWindow);} 
     else{
+      nextQuestionBtn.style.display= 'inline';
       nextQuestionBtn.addEventListener('click', displayQuiz);}
   } 
   
@@ -178,10 +179,10 @@ function checkAnswer(){
     selectedAnswer.innerHTML = `${selectedAnswer.textContent} <i class="fa-solid fa-x"></i>`;
     nextQuestionBtn.addEventListener('click', displayQuiz);
     if (questionNumber == pickedQuestionArray.length){
-      nextQuestionBtn.style.display= 'none';
       finishGameBtn.style.display= 'inline';
       finishGameBtn.addEventListener('click', displayFinalWindow);} 
     else{
+      nextQuestionBtn.style.display= 'inline';
       nextQuestionBtn.addEventListener('click', displayQuiz);}
   }
 }
@@ -214,7 +215,6 @@ function setValuesForNewGame(){
   playerScore = 0;
   playerInfo = undefined;
   pickedQuestionArray = undefined;
-  nextQuestionBtn.style.display = 'inline';
   finishGameBtn.style.display = 'none';
   startForm.reset(); //https://www.w3schools.com/jsref/met_form_submit.asp
 }
