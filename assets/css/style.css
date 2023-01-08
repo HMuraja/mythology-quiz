@@ -159,15 +159,15 @@ header{
 }
 
 /*Game windows control display*/
-#start-container {
+#start-window {
   display: inline;
 }
 
-#question-container{
+#question-window{
   display: none;
 }
 
-#finish-container{
+#finish-window{
   display: none;
 }
 
@@ -196,7 +196,17 @@ header{
   font-size: 1.5rem;
 }
 #finish-game{
-  display: none;
+  width: 100%;
+}
+.fa-check{
+  display: inline;
+  color: greenyellow;
+  font-size: 1.5rem;
+}
+.fa-x{
+  display: inline;
+  color: red;
+  font-size: 1.5rem;
 }
 
 /*Footer styling*/
