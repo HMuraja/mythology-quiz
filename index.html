@@ -10,7 +10,7 @@
 <body id="stars">
     <header> <!--Document header section starts here-->
         <h1 id="game-title">Greek Mythology Quiz</h1>
-        <div id="menu-position">
+        <!--<div id="menu-position">
             <div id="menu-drop">
                 <i class="fa-solid fa-volume-high"></i>
                 <a href="javascript:void(0);" onclick="dropMenu()" id="stack-icon">
@@ -22,23 +22,23 @@
                     <a href="link to starting page" class="black-on-white">Quit Game</a>
                 </div>
             </div>
-        </div>
+        </div>-->
     </header>
 <!--Background photo-->
     <div id="game-area">
         <!--Start Screen for the game-->
         <section id="start-window" class="game-parent-container"> 
             <form class="start-menu" id="start-form">
-                <h2 class="top-section">Start New Quiz</h2>
+                <h2 class="top-section">Start Quiz</h2>
                 <div id="game-options-section" class="middle-section">
                     <input type="radio" id="basic" name="quiz-difficulty" value="basic" class="radio-btn" required>
-                    <label for="basic" class="game-level raised-box o-hover">Basic</label>
+                    <label for="basic" class="game-level raised-box o-hover selectable">Basic</label>
                     <br>
                     <input type="radio" id="moderate" name="quiz-difficulty" value="moderate" class="radio-btn">
-                    <label for="moderate" class="game-level raised-box o-hover">Moderate</label>
+                    <label for="moderate" class="game-level raised-box o-hover selectable">Moderate</label>
                     <br>
                     <input type="radio" id="challenging" name="quiz-difficulty" value="challenging" class="radio-btn">
-                    <label for="challenging" class="game-level raised-box o-hover">Challenging</label>
+                    <label for="challenging" class="game-level raised-box o-hover selectable">Challenging</label>
                     <br>
                     <input type="text" name="player-name" placeholder="Enter Name" id="player-name" class="raised-box" id="fill-box" required>
                 </div>
@@ -54,9 +54,9 @@
             </h2>
             <div id="display-text" class="middle-section">
                 <p class="raised-box" id="question-paragraph">Question goes here!</p>
-                <button class="answers raised-box o-hover">First Option</button>
-                <button class="answers raised-box o-hover">Second Option</button>
-                <button class="answers raised-box o-hover">Third Option</button>
+                <button class="answers raised-box o-hover selectable">First Option</button>
+                <button class="answers raised-box o-hover selectable">Second Option</button>
+                <button class="answers raised-box o-hover selectable">Third Option</button>
             </div>
             <div id ="staus-container" class="bottom-section">
                 <div id="time-left">30s</div>
@@ -78,6 +78,7 @@
             </div>
         </section>   
         <img src="/assets/images/blue-athena-mirrored.png" id="athena-img">
+        <img src="/assets/images/blue-athena-half.png" id="athena-img-half">
     </div> 
 
     <footer>

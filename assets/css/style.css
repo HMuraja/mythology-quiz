@@ -8,7 +8,6 @@
   padding: 0;
   border: none;
   font-family: 'Karla', sans-serif;
-  font-size: 100%;
   color: whitesmoke;
 }
 /*GENERAL SYLE*/
@@ -47,22 +46,33 @@ button{
   width: 90%;
   padding: 10px 5px;
   box-shadow: 3px 3px 3px black;
-  border: solid beige 2px;
+  border: solid whitesmoke 1px;
   border-radius: 4px;
 }
 
 .fa-solid:hover,.fa-regular:hover,.fa-brands:hover{
-  color:#CE951B;
+  color:#A14A76;
   text-shadow: 4px 2px 4px #000000;
 }
 
 .o-hover:hover{
-  background-color: #CE951B;
-  border: solid #CE951B 2px;
+  background-color: #A14A76;
+  border: solid #A14A76 2px;
 }
 
 .fa-solid,.fa-regular,.fa-brands{
   font-size: 2.5rem;
+}
+
+/*BACKGROUND IMAGE*/
+
+/*settings taken from https://css-tricks.com/perfect-full-page-background-image/ */
+#stars{
+  background: url('/assets/images/pexels-rafael-cerqueira-4737484.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*HEADER SECTION*/
@@ -75,7 +85,7 @@ header{
   position:fixed;
 }
 
-/*Menu container*/
+/*Menu container*
 #menu-position {
   position: absolute;
   width: 200px;
@@ -116,26 +126,6 @@ header{
 }
 
 /*GAME SECTION*/
-.game-parent-container{
-  width: 450px;
-  height: 450px;
-  padding: 25px;
-  border-radius: 15px;
-  background-color: rgba(3,31,61,0.9);
-  text-align: center;
-}
-
-/*background-photo*/
-#stars{
-  background: url('/assets/images/pexels-rafael-cerqueira-4737484.jpg') no-repeat top;
-  background-size: 100%;
-}
-#athena-img{
-  position: inline;
-  max-height: 100%;
-  z-index: 1 ;
-}
-
 #game-area {
   position: absolute;
   top: 20%;
@@ -147,8 +137,25 @@ header{
   justify-content: center;
 }
 
-/*Game window sections - identical for all game windows*/
+.game-parent-container{
+  width: 450px;
+  height: 450px;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: rgba(3,31,61,0.9);
+  text-align: center;
+}
 
+#athena-img{
+  position: inline;
+  height: 100%;
+  z-index: 1;
+}
+
+#athena-img-half{
+  display: none;
+}
+/*Game window sections - identical for all game windows*/
 .top-section{
   height: 10%;
   text-align: center;
@@ -198,8 +205,8 @@ header{
 }
 
 .radio-btn:checked + label{
-  background-color: #CE951B;
-  border: solid #CE951B 2px;
+  background-color: #A14A76;
+  border: solid #A14A76 2px;
   box-shadow: 0 0;
 }
 
@@ -208,6 +215,7 @@ header{
 p, #question-paragraph{
   background-color: whitesmoke;
   color: #031F3D;
+  border-radius: 30px;
 }
 #time-left, #time-left~div{
   font-size: 1.5rem;
@@ -250,7 +258,7 @@ footer {
   align-content: center;
   justify-content: space-between;
   position:fixed;
-  bottom: 0
+  bottom: 0;
 }
 
 .social-media-links{
@@ -259,4 +267,69 @@ footer {
   list-style-type: none;
   margin: auto;
   width: 100px;
+}
+
+/*MEDIA QUERIES*/
+@media (max-aspect-ratio: 10/9){
+
+  *{font-size: 2vmax;}
+
+  #game-title{
+    font-size: 3.6vmax;
+    text-align: center;
+  }
+
+  header{
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+
+  #athena-img{
+    display: none;
+  }
+
+  #athena-img-half{
+    display: inline;
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    top: 0;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .game-parent-container{
+    height: 80%;
+    width: 80%;
+    padding: 10px;
+    z-index: 1;
+    background-color: rgba(3,31,61,0.5);
+    border-radius: 15px;
+  }
+
+  .answers, .selectable{
+    background-color: rgba(3,31,61,0.9);
+  }
+
+  #game-area {
+    left: 0;
+    right: 0;
+  }
+
+  #start-form{
+    width: 70%;
+  }
+
+  .top-section{
+    height: 10%;
+  }
+  
+  .middle-section{
+    height: 70%;
+  }
+  
+  .bottom-section{
+    height: 15%;
+  }
 }

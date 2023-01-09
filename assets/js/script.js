@@ -126,7 +126,7 @@ function displayQuiz(){
   questionNumberHtml.innerHTML= questionNumber;
   optionsHtml.innerHTML= 
     `<p id="quiz-question" class="raised-box grey-on-beige">${quizQuestionText}</p>
-    <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[0]}</button>
+    <button class="answers raised-box o-hover beige-on-grey ">${answerOptionsText[0]}</button>
     <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[1]}</button>
     <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[2]}</button>`;
   moveOnGameBtn.style.visibility = 'hidden';
@@ -153,7 +153,7 @@ function checkAnswer(){
       correctOptionHtml = i;
     }}
 
-  selectedOption.style.color="black";
+  selectedOption.style.color="paleturquoise";
   questionIndex++;
 
   if (selectedOption.textContent == correctOption){
