@@ -12,11 +12,11 @@
         <h1 id="game-title">Greek Mythology Quiz</h1>
         <div id="menu-position">
             <div id="menu-drop">
-                <i class="fa-solid fa-volume-high grey-on-beige"></i>
+                <i class="fa-solid fa-volume-high"></i>
                 <a href="javascript:void(0);" onclick="dropMenu()" id="stack-icon">
-                    <i class="fa-solid fa-bars grey-on-beige"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </a>
-                <div id="hidden-menu" class="black-on-white raised-box">
+                <div id="hidden-menu" class="black-on-white">
                     <a href="link to about section" class="black-on-white">About</a>
                     <a href="link to Scoreboard section" class="black-on-white">Scoreboard</a>
                     <a href="link to starting page" class="black-on-white">Quit Game</a>
@@ -29,52 +29,52 @@
         <!--Start Screen for the game-->
         <section id="start-window" class="game-parent-container"> 
             <form class="start-menu" id="start-form">
-                <h2 class="top-section beige-on-grey">Start New Quiz</h2>
+                <h2 class="top-section">Start New Quiz</h2>
                 <div id="game-options-section" class="middle-section">
                     <input type="radio" id="basic" name="quiz-difficulty" value="basic" class="radio-btn" required>
-                    <label for="basic" class="game-level raised-box beige-on-grey o-hover">Basic</label>
+                    <label for="basic" class="game-level raised-box o-hover">Basic</label>
                     <br>
                     <input type="radio" id="moderate" name="quiz-difficulty" value="moderate" class="radio-btn">
-                    <label for="moderate" class="game-level raised-box beige-on-grey o-hover">Moderate</label>
+                    <label for="moderate" class="game-level raised-box o-hover">Moderate</label>
                     <br>
                     <input type="radio" id="challenging" name="quiz-difficulty" value="challenging" class="radio-btn">
-                    <label for="challenging" class="game-level raised-box beige-on-grey o-hover">Challenging</label>
+                    <label for="challenging" class="game-level raised-box o-hover">Challenging</label>
                     <br>
                     <input type="text" name="player-name" placeholder="Enter Name" id="player-name" class="raised-box" id="fill-box" required>
                 </div>
                 <div id="start-game-section" class="bottom-section">
-                    <button type="submit" id="start-game"><i class="fa-regular fa-circle-play beige-on-grey"></i></button>
+                    <button type="submit" id="start-game"><i class="fa-regular fa-circle-play"></i></button>
                 </div>
             </form>
         </section>
     
         <section id= "question-window" class="game-parent-container"> <!--Quiz screen for the game-->
-            <h2 class="top-section beige-on-grey">Question 
+            <h2 class="top-section">Question 
                 <span id= question-number>0</span>/3 
             </h2>
             <div id="display-text" class="middle-section">
-                <p class="raised-box grey-on-beige">Question goes here!</p>
-                <button class="answers raised-box o-hover beige-on-grey">First Option</button>
-                <button class="answers raised-box o-hover beige-on-grey">Second Option</button>
-                <button class="answers raised-box o-hover beige-on-grey">Third Option</button>
+                <p class="raised-box" id="question-paragraph">Question goes here!</p>
+                <button class="answers raised-box o-hover">First Option</button>
+                <button class="answers raised-box o-hover">Second Option</button>
+                <button class="answers raised-box o-hover">Third Option</button>
             </div>
-            <div id ="staus-container" class="bottom-section beige-on-grey">
+            <div id ="staus-container" class="bottom-section">
                 <div id="time-left">30s</div>
                 <button id="move-on">
-                    <i id="next-question" class="fa-solid fa-chevron-right beige-on-grey"></i>
-                    <i id="finish-game" class="fa-solid fa-flag-checkered beige-on-grey" ></i>
+                    <i id="next-question" class="fa-solid fa-chevron-right "></i>
+                    <i id="finish-game" class="fa-solid fa-flag-checkered " ></i>
                 </button>
                 <div>Score <span id="score">0</span></div>
             </div>
         </section>
     
         <section id = "finish-window" class="game-parent-container"> <!--Finish screen for the game-->
-            <h2 class="top-section beige-on-grey"> Finish!</h2>
+            <h2 class="top-section"> Finish!</h2>
             <div class="middle-section">
-                <p class="grey-on-beige raised-box" id="score-feedback"> Your scored 30 points!</p>
+                <p class="raised-box" id="score-feedback"> Your scored 30 points!</p>
             </div>
-            <div id="return-start" class="bottom-section beige-on-grey">
-                <i class="fa-solid fa-rotate-left beige-on-grey"></i>
+            <div id="return-start" class="bottom-sectio">
+                <i class="fa-solid fa-rotate-left "></i>
             </div>
         </section>   
         <img src="/assets/images/blue-athena-mirrored.png" id="athena-img">
@@ -84,11 +84,11 @@
         <ul class="social-media-links">
             <li>
                 <a href="linkedin.com/in/hilla-muraja-093127114" target="_blank" rel="noopener"
-                    aria-label="Visit my LinkedIn page (opens in a new tab)"><i class="fa-brands fa-linkedin beige-on-grey"></i></a>
+                    aria-label="Visit my LinkedIn page (opens in a new tab)"><i class="fa-brands fa-linkedin "></i></a>
             </li>
             <li>
                 <a href="https://github.com/HMuraja/mythology-quiz" target="_blank" rel="noopener"
-                    aria-label="See the project in GitHub (opens in a new tab)"><i class="fa-brands fa-github beige-on-grey"></i></a>
+                    aria-label="See the project in GitHub (opens in a new tab)"><i class="fa-brands fa-github "></i></a>
             </li>
         </ul>
     </footer>

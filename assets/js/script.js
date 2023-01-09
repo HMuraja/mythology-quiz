@@ -35,11 +35,11 @@ function dropMenu() {
   var headerLinks = document.getElementById("hidden-menu");
   var menuDrop= document.getElementById("menu-drop");
   var stack= document.getElementById("stack-icon")
-  if (headerLinks.style.display === "block") {
+  if (headerLinks.style.display === "inline") {
     headerLinks.style.display = "none";
     stack.innerHTML = `<i class="fa-solid fa-bars grey-on-beige"></i>`;
   } else {
-    headerLinks.style.display = "block";
+    headerLinks.style.display = "inline";
     stack.innerHTML = `<i class="fa-solid fa-x grey-on-beige"></i>`;
       }
 }

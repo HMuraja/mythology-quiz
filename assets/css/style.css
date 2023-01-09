@@ -9,6 +9,7 @@
   border: none;
   font-family: 'Karla', sans-serif;
   font-size: 100%;
+  color: whitesmoke;
 }
 /*GENERAL SYLE*/
 body{
@@ -32,18 +33,14 @@ h1 {
 }
 
 /*STANDARD SETTINGS*/
-.grey-on-beige{
-  background-color: transparent;
+
+.dark-on-light{
+  background-color: whitesmoke;
   color: #031F3D;
 }
 
-.beige-on-grey{
-  background-color: #031F3D;
-  color: whitesmoke;
-}
-
-.black-on-white{
-  color: whitesmoke;
+button{
+  background-color: transparent;
 }
 
 .raised-box{
@@ -62,7 +59,6 @@ h1 {
 .o-hover:hover{
   background-color: #CE951B;
   border: solid #CE951B 2px;
-  border-radius: 4px
 }
 
 .fa-solid,.fa-regular,.fa-brands{
@@ -74,20 +70,19 @@ header{
   height: 20%;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   position:fixed;
-  z-index: 1;
 }
 
 /*Menu container*/
 #menu-position {
-  width: inherit;
-  right: 10px;
+  position: absolute;
+  width: 200px;
+  right: 5px;
+  top: 10px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: right;
 }
 
 #menu-drop{
@@ -95,14 +90,22 @@ header{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 200px;
   height: 50px;
+  border: solid whitesmoke;
+  border-style: solid solid solid;
+  border-radius: 5px 5px 0 0;
 }
 
 #hidden-menu {
   display: none;
   position: absolute;
+  padding: 0;
   top: 50px;
+  width: 100%;
+  border: solid whitesmoke;
+  border-radius: 5px 5px;
+  border-style: none solid solid;
 }
 
 #hidden-menu > a {
@@ -117,8 +120,8 @@ header{
   width: 450px;
   height: 450px;
   padding: 25px;
-  border-radius: 5px;
-  background-color: #031F3D;
+  border-radius: 15px;
+  background-color: rgba(3,31,61,0.9);
   text-align: center;
 }
 
@@ -127,22 +130,23 @@ header{
   background: url('/assets/images/pexels-rafael-cerqueira-4737484.jpg') no-repeat top;
   background-size: 100%;
 }
+#athena-img{
+  position: inline;
+  max-height: 100%;
+  z-index: 1 ;
+}
 
 #game-area {
   position: absolute;
   top: 20%;
   bottom: 10%;
-  width: 100%;
+  left: 10%;
+  right: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#athena-img{
-  position: inline;
-  max-height: 100%;
 
-  z-index: 1 ;
-}
 /*Game window sections - identical for all game windows*/
 
 .top-section{
@@ -201,6 +205,10 @@ header{
 
 /*QUESTION WINDOW SPESIFIC STYLE PROPERTIES*/
 
+p, #question-paragraph{
+  background-color: whitesmoke;
+  color: #031F3D;
+}
 #time-left, #time-left~div{
   font-size: 1.5rem;
 }
