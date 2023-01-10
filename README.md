@@ -1,4 +1,6 @@
-# Greek Mythology Quiz
+[View the live project here.](https://hmuraja.github.io/mythology-quiz/)
+
+# About This Quiz
 Greek Mythology Quiz is a quiz game for anyone interested to test their knowledge in the topic. Player can choose questions from three cathegories: basic, moderate and chanllenging. 
 
 Once the player has entered a name and chosen a question cathegory, they can click the play button and the game will start. Player will be given 5 questions from the pool of the selected difficulty. Player needs to select the right answer from 3 options. With every right answer player accumulates points. More challenging questions will generate more points. Once the quiz is over the player will be given a the final score and a choice to play again. Game can be played multiple times as questions are always generated randomly.
