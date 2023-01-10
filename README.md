@@ -9,9 +9,9 @@ Once the player has entered a name and chosen a question cathegory, they can cli
 Contains the title of the game, this also acts as a "homing" button. It can be clicked at any point and it will return the user to the beginning of the game.
 ![Header Image](https://github.com/HMuraja/mythology-quiz/blob/e2763a0739a10eb5d231c5fe41941c1a4a7682e2/assets/readme-media/Screenshot%202023-01-10%20063721.png)
 
-### Drop Menu and Volume Button
-Volume button and drop menu are both set on the right hand side of the header bar. Volume button will allow player to mute the game if they wish so and stack icon will open a drop menu when clicked. Drop menu has three items on it, about, scoreboard and quit game. About item opens a pop-up window that explains rules of the game, this can be closed by clicking x from the corner. If scoreboard is clicked it opens a window displaying the highscore. 
 ### Start Screen
+
+
 ### Question Screen
 ### End screen
 ### Footer
