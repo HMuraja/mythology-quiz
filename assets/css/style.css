@@ -98,8 +98,8 @@ header{
 }
 
 .game-parent-container{
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   padding: 25px;
   border-radius: 15px;
   background-color: rgba(3,31,61,0.9);
@@ -230,6 +230,39 @@ footer {
 }
 
 /*MEDIA QUERIES*/
+@media (max-height:730px){
+
+  #body{
+    overflow: scroll;
+  }
+
+  .game-parent-container{
+    background-color: pink;
+  }
+
+  #athena-img{
+    height: 584px;
+    bottom: 73px;
+  }
+  #game-area {
+    position: absolute;
+    height: 584px;
+    top: 146px;
+    left: 0;
+    right: 0;
+  }
+
+  header {
+    position: relative;
+    height: 146px;
+  }
+  footer {
+    height: 73px;
+    position: relative;
+    bottom: -584px;
+  }
+
+}
 @media (max-aspect-ratio: 10/9){
 
   *{font-size: 2vmax;}
