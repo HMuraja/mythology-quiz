@@ -54,6 +54,7 @@ function setUpQuiz(event){
 //Function gathers playerdata(name and difficulty) and store it in playerinfo object
 function savePlayerInfo(){
   let playerObject={};
+  let selectedSize;
   let playerName = document.getElementById("player-name");
   for (let option of difficultyOptions) {
       if (option.checked) {
@@ -69,16 +70,16 @@ function savePlayerInfo(){
   //Function uses playerinfo object to check game difficulty
 
 function getAllQuestionsOfDifficulty(){
-  let selectedQuestions;
+  let questionArray;
   if (playerInfo.difficulty=='basic'){
-    selectedQuestions=basicQuestions;
+    questionArray = basicQuestions; //Variable from questions.js
   }
   else if (playerInfo.difficulty=='moderate'){
-    selectedQuestions=moderateQuestions;
+    questionArray = moderateQuestions; //Variable from questions.js
   }
   else if (playerInfo.difficulty=='challenging'){
-    selectedQuestions=challengingQuestions;
-  }return selectedQuestions;
+    questionArray = challengingQuestions; //Variable from questions.js
+  }return questionArray;
 }
 
 //Function uses gets three random questions from the pool of selected questions
@@ -89,7 +90,7 @@ function getThreeRandomQuestions(){
   for (let i=0; i < 5; i++){
     let number = Math.floor(Math.random() * 7);
     while (selectedIndexes.includes(number)){
-      number = Math.floor(Math.random() * 7)
+      number = Math.floor(Math.random() * 7);
     }
     selectedIndexes.push(number);
   }
@@ -149,7 +150,7 @@ function checkAnswer(){
   answerBtns[1].removeEventListener('click', recordAnswerB);
   answerBtns[2].removeEventListener('click', recordAnswerC);
   
-  for (i of answerBtns){
+  for (let i of answerBtns){
     if (i.textContent.includes(correctOption)){
       correctOptionHtml = i;
     }}
@@ -185,7 +186,7 @@ function checkAnswer(){
       playerScore += 10;
     } else {
       playerScore += 15;
-    };
+    }
     return;
   }
 

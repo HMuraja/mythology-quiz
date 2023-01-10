@@ -42,45 +42,56 @@ Footer has two links: one to this projects GitHub page and to the authors Linked
 # Testing
 
 ## HTML Validator
-HTML validator was ran twice. On the initial run, 7 misuses of Aria-labels where flagged. Aria-labels were removed or replaced more appropriate attribute. On the second run no errors occurred.
+The Official W3C validator for HTML was ran twice. On the initial run, 4 misuses of Aria-labels where flagged. Aria-labels were removed or replaced more appropriate attribute. On the second run no errors occurred.
 
 ## CSS Validator
-HTML validator was ran twice. On the initial run, 7 misuses of Aria-labels where flagged. Aria-labels were removed or replaced more appropriate attribute. On the second run no errors occurred.
+The Official Jigsaw validator for CSS validator was ran twice. First run came uo with one error which was related to incorrect value. Error was corrected and no further errors were detected the second time around. There were few warning about use of external vendors used to  control the background image. 
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+## JS Validator
+The official Jshint validator for JS was ran twice for the script.js. First time round there was no errors, but warnings and unrecognized variables were noted. Most of the warnings were related to use of "let" and "const" keywords with version ES6. Similar warnings were flagged around the use of template literals. These might cause an issue if older browser types are used.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+From the undeclared variables 2 cases were corrected, just by adding a simple declaration. Few variables were unrecognized as they originated from another js file, a comment was added for clarification. 
+A semicolon was noted to be missing from one line, and another line had excess one, both were corrected. 
+A for loop was missing a variable declaration. Declaration added to the loop.
 
-Validator Testing
-HTML
-No errors were returned when passing through the official W3C validator
-CSS
-No errors were found when passing through the official (Jigsaw) validator
-JavaScript
-No errors were found when passing through the official Jshint validator
-The following metrics were returned:
-There are 11 functions in this file.
-Function with the largest signature takes 2 arguments, while the median is 0.
-Largest function has 10 statements in it, while the median is 3.
-The most complex function has a cyclomatic complexity value of 4 while the median is 2.
+The scrip.js was ran through the validator for the second time after changes and no new warnings were noted. 
+
+Following metrics were returned:
+  * There are 15 functions in this file
+  * Function with the largest signature take 1 arguments, while the median is 0.
+  * Largest function has 23 statements in it, while the median is 5.
+  * The most complex function has a cyclomatic complexity value of 6 while the median is 1.
+
+When question.js was ran throuigh the validator, no errors or significant warnings were noted. No metrics were provided for thsi file. 
+
+## Screen sizes
+Quiz was ran on all available viewports on Chrome Developer Tools and deemed to be responsive on all of them. 
 
 ## Bugs
-## Validator Testing
-## Unfixed Bugs
+No unresolved bugs were detected during testing. 
 
 ## Deployement History
 
-## Credits
----
-### Content 
-- Questions for this quiz where taken from [trivialbliss.](https://triviabliss.com/categories/greek-mythology/)
+# Credits
+
+## Code
+All code has been written by Hilla Muraja, unless stated otherwise. If code has been takne elsewhere, it has been clearly stated in in content section or in the section below.
+
+- Radio buttons circles were removed and replaced with the label text by using the code found from [markheat.net](https://markheath.net/post/customize-radio-button-css) website.
+- Changed start game pages submit button to icon button using the code with alteration from [stackoverflow](https://stackoverflow.com/questions/30837216/replacing-submit-buttons-with-icon-basics).
+- Background was made responsive for all screensizes by using this code taken from [here.](https://css-tricks.com/perfect-full-page-background-image/ )
+
+## Resources
+Sources for troubleshooting:
+ - [W3Schools](https://www.w3schools.com/)
+ - [Code Institutes Course Material](https://codeinstitute.net/)
+
+[Gimp 2](https://www.gimp.org/downloads/) was used to modify images used in this project.
+
+## Content and Media
+- Questions for this quiz were taken from [trivialbliss.](https://triviabliss.com/categories/greek-mythology/) and from book Mythos authored by Stephen Fry.
 - Icons where taken from [fontawesome.](www.fontawesome.com)
 - All images have been taken from [pexels.](https://www.pexels.com/)
 - Fonts are from [Google Fonts.](https://fonts.google.com/)
-- Radio buttons circles were removed and replaced with the label text by using the code found from [markheat.net](https://markheath.net/post/customize-radio-button-css) website.
-- Changed start game pages submit button to icon button using the code with alteration from stack [overflow](https://stackoverflow.com/questions/30837216/replacing-submit-buttons-with-icon-basics).
-### Media 
