@@ -180,7 +180,7 @@ header{
 p, #question-paragraph{
   background-color: whitesmoke;
   color: #031F3D;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 #time-left, #time-left~div{
   font-size: 1.5rem;

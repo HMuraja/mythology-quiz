@@ -16,7 +16,6 @@ const nextQuestionBtn = document.getElementById("next-question");
 const finishGameBtn = document.getElementById("finish-game");
 const moveOnGameBtn = document.getElementById("move-on");
 const scoreHtml = document.getElementById("score");
-const timeLeft = document.getElementById("time-left");
 
 const totalScoreHtml = document.getElementById("score-feedback");
 const returnToStart = document.getElementById("return-start");
