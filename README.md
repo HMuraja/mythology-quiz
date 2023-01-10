@@ -6,7 +6,7 @@ Once the player has entered a name and chosen a question cathegory, they can cli
 
 Once the quiz is over the player will be given the final score and a choice to play again. Game can be played multiple times as questions are always generated randomly.
 
-Link to the quiz is [here.](https://hmuraja.github.io/mythology-quiz/)
+[Link to the Quiz here.](https://hmuraja.github.io/mythology-quiz/)
 
 ![Am I responsive Image](assets/readme-media/am-i-responsive.png)
 
