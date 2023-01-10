@@ -50,17 +50,17 @@ button{
   border-radius: 4px;
 }
 
-.fa-solid:hover,.fa-regular:hover,.fa-brands:hover{
+.logo-hover:hover{
   color:#504aa1;
   text-shadow: 4px 2px 4px #000000;
 }
 
-.o-hover:hover{
+.purple-hover:hover{
   background-color: #504aa1;
   border: solid #504aa1 2px;
 }
 
-.fa-solid,.fa-regular,.fa-brands{
+.logo-hover{
   font-size: 2.5rem;
 }
 

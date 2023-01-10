@@ -110,10 +110,10 @@ function displayQuiz(){
   let answerOptionsText = pickedQuestionArray[questionIndex].options;
   questionNumberHtml.innerHTML= questionNumber;
   optionsHtml.innerHTML= 
-    `<p id="quiz-question" class="raised-box grey-on-beige">${quizQuestionText}</p>
-    <button class="answers raised-box o-hover beige-on-grey ">${answerOptionsText[0]}</button>
-    <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[1]}</button>
-    <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[2]}</button>`;
+    `<p class="raised-box" id="question-paragraph">${quizQuestionText}</p>
+    <button class="answers raised-box purple-hover selectable">${answerOptionsText[0]}</button>
+    <button class="answers raised-box purple-hover selectable">${answerOptionsText[1]}</button>
+    <button class="answers raised-box purple-hover selectable">${answerOptionsText[2]}</button>`;
   moveOnGameBtn.style.visibility = 'hidden';
   answerBtns[0].addEventListener('click', recordAnswerA);
   answerBtns[1].addEventListener('click', recordAnswerB);
