@@ -51,13 +51,13 @@ button{
 }
 
 .fa-solid:hover,.fa-regular:hover,.fa-brands:hover{
-  color:#A14A76;
+  color:#504aa1;
   text-shadow: 4px 2px 4px #000000;
 }
 
 .o-hover:hover{
-  background-color: #A14A76;
-  border: solid #A14A76 2px;
+  background-color: #504aa1;
+  border: solid #504aa1 2px;
 }
 
 .fa-solid,.fa-regular,.fa-brands{
@@ -165,8 +165,8 @@ header{
 }
 
 .radio-btn:checked + label{
-  background-color: #A14A76;
-  border: solid #A14A76 2px;
+  background-color: #504aa1;
+  border: solid #504aa1 2px;
   box-shadow: 0 0;
 }
 

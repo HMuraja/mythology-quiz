@@ -30,23 +30,7 @@ let selectedOption;
 //GAME INITIATING EVENT LISTENER
 document.addEventListener("DOMContentLoaded", loadStartWindow);
 
-//FUNCTION FOR DROPDOWN MENU
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu bar icon */
-function dropMenu() {
-  var headerLinks = document.getElementById("hidden-menu");
-  var menuDrop= document.getElementById("menu-drop");
-  var stack= document.getElementById("stack-icon")
-  if (headerLinks.style.display === "inline") {
-    headerLinks.style.display = "none";
-    stack.innerHTML = `<i class="fa-solid fa-bars grey-on-beige"></i>`;
-  } else {
-    headerLinks.style.display = "inline";
-    stack.innerHTML = `<i class="fa-solid fa-x grey-on-beige"></i>`;
-      }
-}
-
 //GAME FUNCTIONS
-
 //*Function ensure start window is displayed, submit-eventlistener trigger quiz-set-up
 function loadStartWindow(){
   finishWindow.style.display="none"
