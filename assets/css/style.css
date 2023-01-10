@@ -233,20 +233,17 @@ footer {
 @media (max-height:730px){
 
   #body{
-    overflow: scroll;
-  }
-
-  .game-parent-container{
-    background-color: pink;
+    overflow-y: scroll;
   }
 
   #athena-img{
-    height: 584px;
+    height: 511px;
     bottom: 73px;
   }
+
   #game-area {
     position: absolute;
-    height: 584px;
+    height: 511px;
     top: 146px;
     left: 0;
     right: 0;
@@ -259,11 +256,11 @@ footer {
   footer {
     height: 73px;
     position: relative;
-    bottom: -584px;
+    bottom: -511px;
   }
-
 }
-@media (max-aspect-ratio: 10/9){
+
+@media screen and (max-aspect-ratio: 10/8){
 
   *{font-size: 2vmax;}
 
