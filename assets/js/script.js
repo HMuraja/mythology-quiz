@@ -1,6 +1,7 @@
 // GLOBAL VARIABLES
 
 //Get HTML
+const gameTitle = document.getElementById("game-title")
 const startWindow= document.getElementById("start-window");
 const questionWindow = document.getElementById("question-window");
 const finishWindow= document.getElementById("finish-window");
@@ -29,12 +30,18 @@ let selectedOption;
 
 //GAME INITIATING EVENT LISTENER
 document.addEventListener("DOMContentLoaded", loadStartWindow);
+gameTitle.addEventListener("click", quitGame);
+
+function quitGame(){
+  setValuesForNewGame();
+  loadStartWindow();
+}
 
 //GAME FUNCTIONS
 //*Function ensure start window is displayed, submit-eventlistener trigger quiz-set-up
 function loadStartWindow(){
-  finishWindow.style.display="none"
-  startWindow.style.display="inline"
+  finishWindow.style.display="none";
+  startWindow.style.display="inline";
   startForm.addEventListener('submit', setUpQuiz);
 }
 
@@ -192,10 +199,9 @@ function checkAnswer(){
 
 // Function displays final window, providing player their total score, runs function to refresh game variables and loads start window after player clicks the icon
 function displayFinalWindow(){
-  questionWindow.style.display= "none";
-  finishWindow.style.display = "inline";
   totalScoreHtml.innerHTML = `Your total score is ${playerScore} points!`;
   setValuesForNewGame();
+  finishWindow.style.display = "inline";
   returnToStart.addEventListener('click', loadStartWindow);
 }
 
@@ -208,5 +214,6 @@ function setValuesForNewGame(){
   pickedQuestionArray = undefined;
   nextQuestionBtn.style.display= 'inline';
   finishGameBtn.style.display = 'none';
+  questionWindow.style.display= "none";
   startForm.reset(); //https://www.w3schools.com/jsref/met_form_submit.asp
 }
