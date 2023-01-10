@@ -25,6 +25,7 @@ let questionIndex = 0;
 let playerScore = 0;
 let playerInfo;
 let pickedQuestionArray;
+let selectedOption;
 
 //GAME INITIATING EVENT LISTENER
 document.addEventListener("DOMContentLoaded", loadStartWindow);
@@ -130,13 +131,26 @@ function displayQuiz(){
     <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[1]}</button>
     <button class="answers raised-box o-hover beige-on-grey">${answerOptionsText[2]}</button>`;
   moveOnGameBtn.style.visibility = 'hidden';
-  for (i of answerBtns) {
-    i.addEventListener('click', tagPlayersAnswer);
-      function tagPlayersAnswer(event){//Tags player answer with ID="player-answer"
-        this.setAttribute('id', 'player-answer');
-        checkAnswer();}
-  } 
+  answerBtns[0].addEventListener('click', recordAnswerA);
+  answerBtns[1].addEventListener('click', recordAnswerB);
+  answerBtns[2].addEventListener('click', recordAnswerC);
 }
+
+function recordAnswerA(){
+  selectedOption = answerBtns[0];
+  checkAnswer();
+}
+
+function recordAnswerB(){
+  selectedOption = answerBtns[1];
+  checkAnswer();
+}
+
+function recordAnswerC(){
+  selectedOption = answerBtns[2];
+  checkAnswer();
+}
+
 
 //Function checks players answer and provides feed back for the player
 //Points are increased if correct answer is selected
@@ -144,45 +158,39 @@ function displayQuiz(){
 // Listens for next question click to display next question
 
 function checkAnswer(){
-  let selectedOption = document.getElementById("player-answer");
   let correctOption = pickedQuestionArray[questionIndex].correctAnswer;
   let correctOptionHtml;
 
+  answerBtns[0].removeEventListener('click', recordAnswerA);
+  answerBtns[1].removeEventListener('click', recordAnswerB);
+  answerBtns[2].removeEventListener('click', recordAnswerC);
+  
   for (i of answerBtns){
     if (i.textContent.includes(correctOption)){
       correctOptionHtml = i;
     }}
 
-  selectedOption.style.color="paleturquoise";
+  selectedOption.style.border= "solid #031F3D 2px";
   questionIndex++;
+  correctOptionHtml.innerHTML = `${correctOption}<i class="fa-solid fa-check"></i>`;
 
   if (selectedOption.textContent == correctOption){
-    correctOptionHtml.innerHTML = `${correctOption} <i class="fa-solid fa-check"></i>`;
     addPoints();
     scoreHtml.innerHTML= playerScore;
-    if (questionIndex == pickedQuestionArray.length){
-      moveOnGameBtn.style.visibility= 'visible';
-      nextQuestionBtn.style.display= 'none';
-      finishGameBtn.style.display= 'inline';
-      finishGameBtn.addEventListener('click', displayFinalWindow);} 
-    else{
-      moveOnGameBtn.style.visibility= 'visible';
-      nextQuestionBtn.addEventListener('click', displayQuiz);}
   } 
-  
-  else {
-    correctOptionHtml.innerHTML = `${correctOption} <i class="fa-solid fa-check"></i>`;
+
+  if (selectedOption.textContent !== correctOption){
     selectedOption.innerHTML = `${selectedOption.textContent} <i class="fa-solid fa-x"></i>`;
-    nextQuestionBtn.addEventListener('click', displayQuiz);
-    if (questionIndex == pickedQuestionArray.length){
-      moveOnGameBtn.style.visibility= 'visible';
-      nextQuestionBtn.style.display= 'none';
-      finishGameBtn.style.display= 'inline';
-      finishGameBtn.addEventListener('click', displayFinalWindow);} 
-    else{
-      moveOnGameBtn.style.visibility= 'visible';
-      nextQuestionBtn.addEventListener('click', displayQuiz);}
   }
+
+  if (questionIndex == pickedQuestionArray.length){
+    moveOnGameBtn.style.visibility= 'visible';
+    nextQuestionBtn.style.display= 'none';
+    finishGameBtn.style.display= 'inline';
+    finishGameBtn.addEventListener('click', displayFinalWindow);} 
+  else{
+    moveOnGameBtn.style.visibility= 'visible';
+    nextQuestionBtn.addEventListener('click', displayQuiz);}
 }
 
 //Function increases score according to the selected difficulty

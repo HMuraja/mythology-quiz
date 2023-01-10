@@ -5,7 +5,7 @@ let basicQuestions = [
     correctAnswer: "Minotaur"
     },
     {
-    question: "Olympians were cinsidered to be the major gods among greek mythology, how many where they?",
+    question: "Olympians were the major gods among greek mythology, how many where they?",
     options: ["6", "16", "12"],
     correctAnswer: "12"
     },
@@ -30,7 +30,7 @@ let basicQuestions = [
     correctAnswer: "Ares"
     },
     {
-    question: `Artemis is greek goddess of what – only one among all gods?`,
+    question: "Artemis is greek goddess of what – only one among all gods?",
     options: ["Harvest and agriculture", "Virginity and chastity", "Hunt and music"],
     correctAnswer: "Virginity and chastity"
     }
@@ -63,9 +63,9 @@ let moderateQuestions = [
     correctAnswer: "Iris"
     },
     {
-    question: "Artemis is greek goddess of what, only one among all gods?",
-    options: ["Harvest and agriculture", "Virginity and chastity", "Hunt and music"],
-    correctAnswer: "Virginity and chastity"
+    question: "Who killed the the the Medusa and gave her head to Athena?",
+    options: ["Achilles", "Hercules", "Perseus"],
+    correctAnswer: "Perseus"
     },
     {
     question: "Who were the guardian spirits of nature in Greek mythology?",
