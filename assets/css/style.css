@@ -73,7 +73,7 @@ button{
 
 /*This code taken from https://css-tricks.com/perfect-full-page-background-image/ */
 #stars{
-  background: url('/assets/images/pexels-rafael-cerqueira-4737484.jpg') no-repeat center center fixed; 
+  background: url('../images/night-sky.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
