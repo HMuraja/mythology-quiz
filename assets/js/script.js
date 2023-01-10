@@ -1,6 +1,4 @@
 // GLOBAL VARIABLES
-
-//Get HTML
 const gameTitle = document.getElementById("game-title")
 const startWindow= document.getElementById("start-window");
 const questionWindow = document.getElementById("question-window");
@@ -142,11 +140,7 @@ function recordAnswerC(){
 }
 
 
-//Function checks players answer and provides feed back for the player
-//Points are increased if correct answer is selected
-//Questionnumber variable is incresed and checked incase array is finished, if finised finish flag is diplayed
-// Listens for next question click to display next question
-
+//Function checks players answer, updates poin, provides feedback and adds event listeners for moving on
 function checkAnswer(){
   let correctOption = pickedQuestionArray[questionIndex].correctAnswer;
   let correctOptionHtml;

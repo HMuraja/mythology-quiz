@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Play&family=Unbounded:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200&display=swap');
 
-/*General Style*/
+/*GENERAL SYLE*/
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +10,10 @@
   font-family: 'Karla', sans-serif;
   color: whitesmoke;
 }
-/*GENERAL SYLE*/
+
 body{
   font-family: 'Karla' , sans-serif;
-   /*Idea taken to use scaling of percentage in question as per article: https://blog.logrocket.com/using-em-vs-rem-css/ */
+  font-size: 1.1rem;
 }
 
 h2, h2>span {
@@ -31,7 +31,7 @@ h1 {
   letter-spacing: 0.5vw;  
 }
 
-/*STANDARD SETTINGS*/
+/*FEATURE SETTINGS*/
 
 .dark-on-light{
   background-color: whitesmoke;
@@ -71,7 +71,7 @@ button{
 
 /*BACKGROUND IMAGE*/
 
-/*settings taken from https://css-tricks.com/perfect-full-page-background-image/ */
+/*This code taken from https://css-tricks.com/perfect-full-page-background-image/ */
 #stars{
   background: url('/assets/images/pexels-rafael-cerqueira-4737484.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -163,7 +163,7 @@ header{
   width: 60%;
 }
 
-.radio-btn{ /*https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css*/
+.radio-btn{ /*Instructions for thsi code were taken from https://stackoverflow.com/questions/18078871/hide-check-radio-button-with-css*/
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -214,7 +214,7 @@ p, #question-paragraph{
   display: none;
 }
 
-/*Footer styling*/
+/*FOOTER STYLE*/
 footer {
   background-color: #031F3D;
   height: 10%;
