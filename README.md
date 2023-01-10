@@ -16,13 +16,13 @@ Once the quiz is over the player will be given the final score and a choice to p
 Contains the title of the game, this also acts as a "homing" button. This title is always visible and can be clicked at any point and it will return the user to the beginning of the game.
 ![Header Image](assets/readme-media/header.png)
 ## Start Window
-Start window is visible first thing when page is loaded. Start window has a title "start" and 3 buttons presenting the three difficulty levels to choose from. Player is requested to enter their name in the field stating "Enter name" andthe play button on the bottom of the window starts the game. Game can only be started after name and difficulty levels have been chosen.
+Start window is visible first thing when page is loaded. Start window has a title "start" and 3 buttons presenting the three difficulty levels to choose from. Player is requested to enter their name in the field stating "Enter name" and the play button on the bottom of the window starts the game. Game can only be started after name and difficulty levels have been chosen.
 
 ![Header Image](assets/readme-media/start-window.png)
 ## Question Window
-Once play button is pressed th efirst questioin is displayed on the question window.This window has three sections: top, middle and bottom. Top section indicates the question number that the player is currently on. 
+Once play button is pressed the first question is displayed on the question window. This window has three sections: top, middle and bottom. Top section indicates the question number that the player is currently on. 
 
-Middle part has the question and three clickable answer buttons.Once an answer has been selected, a green tick will appear next to the correct answer button. If player has chosen wrong answer a red "x" icon will display next to the selection.  
+Middle part has the question and three clickable answer buttons. Once an answer has been selected, a green tick will appear next to the correct answer button. If player has chosen wrong answer a red "x" icon will display next to the selection.  
 
 Bottom section displays the score player has accumulated and a "move-on" button. Move on button displays only after one of the answer options has been selected. Move-on button is an arrow button that displays the next question once clicked, once all 5 questions have been exhausted, button will change into a checkered flag. This button will display the finish window once clicked.
 
@@ -30,12 +30,12 @@ Bottom section displays the score player has accumulated and a "move-on" button.
 
 
 ## Finish Window
-This is the last wndow of the game and states "Finish!" at the top, the score in the middle and and return arrow at the bottom. Score displayes is a sum of all the points gotten from the quiz. Once the return button, which is a circling arrow, is clicked it will return the the start window to the view. A new game is started just like explained in the beginning.
+This is the last window of the game and states "Finish!" at the top, the score in the middle and return arrow at the bottom. Score displays is a sum of all the points gotten from the quiz. Once the return button, which is a circling arrow, is clicked it will return the start window to the view. A new game is started just like explained in the beginning.
 
 ![Finish Window](assets/readme-media/finish-window.png)
 ## Footer
 
-Footer has two links: one to this projects GitHub page and to the authors Linkedin profile.
+Footer has two links: one to this projects GitHub page and to the authors LinkedIn profile.
 
 ![Footer](assets/readme-media/socialmedia-links.png)
 
@@ -45,7 +45,7 @@ Footer has two links: one to this projects GitHub page and to the authors Linked
 The Official W3C validator for HTML was ran twice. On the initial run, 4 misuses of Aria-labels where flagged. Aria-labels were removed or replaced more appropriate attribute. On the second run no errors occurred.
 
 ## CSS Validator
-The Official Jigsaw validator for CSS validator was ran twice. First run came uo with one error which was related to incorrect value. Error was corrected and no further errors were detected the second time around. There were few warning about use of external vendors used to  control the background image. 
+The Official Jigsaw validator for CSS validator was ran twice. First run came up with one error which was related to incorrect value. Error was corrected and no further errors were detected the second time around. There were few warnings about use of external vendors used to  control the background image. 
 
 
 
@@ -60,11 +60,11 @@ The scrip.js was ran through the validator for the second time after changes and
 
 Following metrics were returned:
   * There are 15 functions in this file
-  * Function with the largest signature take 1 arguments, while the median is 0.
+  * Function with the largest signature take 1 argument, while the median is 0.
   * Largest function has 23 statements in it, while the median is 5.
   * The most complex function has a cyclomatic complexity value of 6 while the median is 1.
 
-When question.js was ran throuigh the validator, no errors or significant warnings were noted. No metrics were provided for thsi file. 
+When question.js was ran through the validator, no errors or significant warnings were noted. No metrics were provided for this file. 
 
 ## Screen sizes
 Quiz was ran on all available viewports on Chrome Developer Tools and deemed to be responsive on all of them. 
@@ -72,7 +72,26 @@ Quiz was ran on all available viewports on Chrome Developer Tools and deemed to 
 ## Bugs
 No unresolved bugs were detected during testing. 
 
-## Deployement History
+# Deployement History
+
+## Gitpod
+The project can be deployed in Gitpod.
+
+Following steps were taken to deploy to GitHub page:
+
+ - Find the repository you wish to deploy with Gitpod.
+ - Click open the repository and find orange button stating gitpod, clikc on it.
+ - A new workspace is uploaded on Gitpod for this project.
+ - On the Terminal on Gitpod, type "python3 -m http.server".
+ - A pop up request permission to open a port 8000, click open in preview or the browser.
+
+## Github Pages
+Live page was deployed in GitHub, as per follows:
+ - Find the repository you wish to deploy with Gitpod.
+ - Click open the repository and find a "Settings" button on the op ribbon, click on it.
+ - Open from the side panel "GitHub Pages" Section.
+ - Under "Source", click the "Branch" dropdown and then choose "Master" instead of "None" and press ok.
+ - The page will take a while to upload, but once ready a link to the live page will appear on top of the page.
 
 # Credits
 
