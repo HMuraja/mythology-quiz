@@ -9,14 +9,14 @@
 </head>
 <body id="stars">
     <header>
-        <h1 id="game-title">Greek Mythology Quiz</h1>
+        <h1 id="game-title"  aria-label="Game title and link that restarts the game if clikced.">Greek Mythology Quiz</h1>
     </header>
 <!--Background photo-->
     <div id="game-area">
         <!--Start Screen for the game-->
         <section id="start-window" class="game-parent-container"> 
             <form class="start-menu" id="start-form">
-                <h2 class="top-section">Start Quiz</h2>
+                <h2 class="top-section">Start</h2>
                 <div id="game-options-section" class="middle-section">
                     <input type="radio" id="basic" name="quiz-difficulty" value="basic" class="radio-btn" required>
                     <label for="basic" class="game-level raised-box purple-hover selectable">Basic</label>
@@ -35,21 +35,21 @@
             </form>
         </section>
     
-        <section id= "question-window" class="game-parent-container"> <!--Quiz screen for the game-->
+        <section id= "question-window" class="game-parent-container"> 
             <h2 class="top-section">Question 
                 <span id= question-number>0</span>/3 
             </h2>
             <div id="display-text" class="middle-section">
-                <p class="raised-box" id="question-paragraph">Question goes here!</p>
-                <button class="answers raised-box purple-hover selectable">First Option</button>
-                <button class="answers raised-box purple-hover selectable">Second Option</button>
-                <button class="answers raised-box purple-hover selectable">Third Option</button>
+                <p class="raised-box" id="question-paragraph" aria-label="Quiz question.">Question goes here!</p>
+                <button class="answers raised-box purple-hover selectable" aria-label="Answer option one.">First Option</button>
+                <button class="answers raised-box purple-hover selectable" aria-label="Answer option two.">Second Option</button>
+                <button class="answers raised-box purple-hover selectable" aria-label="Answer option three.">Third Option</button>
             </div>
             <div id ="staus-container" class="bottom-section">
                 <div>Score <span id="score">0</span></div>
                 <button id="move-on">
-                    <i id="next-question" class="fa-solid fa-chevron-right logo-hover"></i>
-                    <i id="finish-game" class="fa-solid fa-flag-checkered logo-hover" ></i>
+                    <i id="next-question" class="fa-solid fa-chevron-right logo-hover" aria-label="Arrow icon that switches the question when clicked."></i>
+                    <i id="finish-game" class="fa-solid fa-flag-checkered logo-hover" aria-label="Checkered flag icon that changes the window to finsh window once clicked."></i>
                 </button>
             </div>
         </section>
@@ -63,14 +63,14 @@
                 <i class="fa-solid fa-rotate-left logo-hover"></i>
             </div>
         </section>   
-        <img src="/assets/images/blue-athena-mirrored.png" id="athena-img">
-        <img src="/assets/images/blue-athena-half.png" id="athena-img-half">
+        <img src="/assets/images/blue-athena-mirrored.png" id="athena-img" aria-label="Image of Greek Godess Athena statue.">
+        <img src="/assets/images/blue-athena-half.png" id="athena-img-half" aria-label="Image of Greek Godess Athena statue.">
     </div> 
 
     <footer>
         <ul class="social-media-links">
             <li>
-                <a href="linkedin.com/in/hilla-muraja-093127114" target="_blank" rel="noopener"
+                <a href="https://linkedin.com/in/hilla-muraja-093127114" target="_blank" rel="noopener"
                     aria-label="Visit my LinkedIn page (opens in a new tab)"><i class="fa-brands fa-linkedin logo-hover"></i></a>
             </li>
             <li>
