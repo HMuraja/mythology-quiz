@@ -1,9 +1,7 @@
 # Greek Mythology Quiz
-Greek Mythology Quiz is a quiz game for anyone interested to test their knowledge in this area. There are three difficulty levels: basic, moderate and chanllenging. Player is requested also to enter their initials so incase they hit the hight score, their user name will be listed on the scoreboard. 
+Greek Mythology Quiz is a quiz game for anyone interested to test their knowledge in the topic. Player can choose questions from three cathegories: basic, moderate and chanllenging. 
 
-Scoreboard can be found from the dropdown menu in the corner, along with about, and quit game options. About section shares game instructions and quit game is used if player wishes to quit while playing. 
-
-Once the player has selected a name and difficulty level, they can click the play button and start the game. Player will be given 8 questions from the pool of 20 questions of the selected difficulty. Player needs to select the right answer from 3 options with a given time limit of 30 seconds. With every right answer player accumulates points. More difficult the game is more points each answer gives the player. Both score and time is shown on the screen.
+Once the player has entered a name and chosen a question cathegory, they can click the play button and the game will start. Player will be given 5 questions from the pool of the selected difficulty. Player needs to select the right answer from 3 options. With every right answer player accumulates points. More challenging questions will generate more points. Once the quiz is over the player will be given a the final score and a choice to play again. Game can be played multiple times as questions are always generated randomly.
 
 ## Features
 
