@@ -1,4 +1,11 @@
-# **Greek Mythology Quiz - Project Portfolio 2 - JavaScript**
+<div align=center>
+  <h1><strong>Project 2 - Greek Mythology Quiz </strong></h1>
+  <img src="assets/readme-media/am-i-responsive.png" width=65%>
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Gitpod](https://img.shields.io/badge/gitpod-f06611.svg?style=for-the-badge&logo=gitpod&logoColor=white)
+
+</div>
 
 "Greek Mythology Quiz" is and online quiz for anyone curious to test their knowledge or learn more about Greek Mythology. Player can choose the question difficulty from three cathegories: basic, moderate and chanllenging. 
 
@@ -6,19 +13,22 @@ Once the player has entered a name and chosen a question cathegory, they can cli
 
 Once the quiz is over the player will be given the final score and a choice to play again. Game can be played multiple times as questions are always generated randomly.
 
-[Link to the Quiz here.](https://hmuraja.github.io/mythology-quiz/)
-
-![Am I responsive Image](assets/readme-media/am-i-responsive.png)
+Play the live version [here.](https://hmuraja.github.io/mythology-quiz/)
 
 # Features
 
 ## Header
 Contains the title of the game, this also acts as a "homing" button. This title is always visible and can be clicked at any point and it will return the user to the beginning of the game.
-![Header Image](assets/readme-media/header.png)
+<div align=center>
+  <img align=center src="assets/readme-media/header.png" width=65%>
+</div>
 ## Start Window
 Start window is visible first thing when page is loaded. Start window has a title "start" and 3 buttons presenting the three difficulty levels to choose from. Player is requested to enter their name in the field stating "Enter name" and the play button on the bottom of the window starts the game. Game can only be started after name and difficulty levels have been chosen.
 
-![Header Image](assets/readme-media/start-window.png)
+<div align=center>
+  <img src="assets/readme-media/start-window.png" width=30%>
+</div>
+
 ## Question Window
 Once play button is pressed the first question is displayed on the question window. This window has three sections: top, middle and bottom. Top section indicates the question number that the player is currently on. 
 
@@ -26,18 +36,28 @@ Middle part has the question and three clickable answer buttons. Once an answer 
 
 Bottom section displays the score player has accumulated and a "move-on" button. Move on button displays only after one of the answer options has been selected. Move-on button is an arrow button that displays the next question once clicked, once all 5 questions have been exhausted, button will change into a checkered flag. This button will display the finish window once clicked.
 
-![Question Start Window](assets/readme-media/question-window.png) ![Correct Answer](assets/readme-media/correct-answer.png) ![Wrong Answer](assets/readme-media/Screenshot%202023-01-10%20064745.png)
-
+<div align=center>
+  <img  src="assets/readme-media/question-window.png" width=30%>
+  <img src="assets/readme-media/correct-answer.png" width=30%>
+  <img src="assets/readme-media/Screenshot%202023-01-10%20064745.png" width=30%>
+</div>
 
 ## Finish Window
 This is the last window of the game and states "Finish!" at the top, the score in the middle and return arrow at the bottom. Score displays is a sum of all the points gotten from the quiz. Once the return button, which is a circling arrow, is clicked it will return the start window to the view. A new game is started just like explained in the beginning.
+assets/readme-media/start-window.png
 
-![Finish Window](assets/readme-media/finish-window.png)
+<div align=center>
+  <img src="assets/readme-media/finish-window.png" width=30%>
+</div>
+
 ## Footer
 
 Footer has two links: one to this projects GitHub page and to the authors LinkedIn profile.
 
-![Footer](assets/readme-media/socialmedia-links.png)
+<div align=center>
+  <img src="assets/readme-media/socialmedia-links.png" width=30%>
+</div>
+
 
 # Testing
 
