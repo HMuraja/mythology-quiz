@@ -1,5 +1,5 @@
 <div align=center>
-  <h1><strong>Project 2 - Greek Mythology Quiz </strong></h1>
+  <h1><strong>Greek Mythology Quiz </strong></h1>
   <img src="assets/readme-media/am-i-responsive.png" width=65%>
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
